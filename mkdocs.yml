@@ -1,0 +1,27 @@
+site_name: My Technical Wiki
+repo_url: https://github.com/kota-kota/my-tech-wiki
+repo_name: kota-kota/my-tech-wiki
+
+theme:
+  name: 'material'
+  language: 'ja'
+  features:
+    - navigation.expand
+extra:
+  search:
+    language: 'jp'
+markdown_extensions:
+  - meta
+  - pymdownx.mark
+  - pymdownx.keys
+  - admonition
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: colorful
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+extra_css:
+  - "css/custom.css"
