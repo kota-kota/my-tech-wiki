@@ -476,13 +476,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ネットワーク設定を反映する
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     リモートログインできるようにする
   </a>
   
@@ -494,8 +501,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    共有フォルダ
+  <a href="#_15" class="md-nav__link">
+    共有フォルダを設定する
   </a>
   
 </li>
@@ -515,8 +522,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../rock64_use_external_hdd/" class="md-nav__link">
-        Rock64で外付けHDDを使用する
+      <a href="../20_how_to_use_external_hdd/" class="md-nav__link">
+        外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
       </a>
     </li>
   
@@ -673,13 +722,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ネットワーク設定を反映する
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     リモートログインできるようにする
   </a>
   
@@ -691,8 +747,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    共有フォルダ
+  <a href="#_15" class="md-nav__link">
+    共有フォルダを設定する
   </a>
   
 </li>
@@ -709,7 +765,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/rock64_install_ubuntu1804.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/10_rock64_install_ubuntu1804.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -737,11 +793,13 @@
 <h3 id="sd">ブート用イメージをSDカードに書きこむ</h3>
 <ol>
 <li>microSDカードをフォーマットします。フォーマットは <code>SD Card Formatter</code> というフリーソフトを使用しました。ファイルシステムは <code>FAT32</code> を選択します。</li>
-<li>以下のサイトから、<code>PINE64 Installler</code> をインストールします。</li>
-<li><a href="https://github.com/pine64dev/PINE64-Installer">https://github.com/pine64dev/PINE64-Installer</a></li>
-<li><code>PINE64 Installler</code> を起動して、OS選択画面で <code>Ubuntu 18.04 Bionic minimal 64bit Image (build 0.7.9-1067)</code>を選択します。</li>
+<li>以下のサイトから、<code>PINE64 Installler</code> をインストールします。<br />
+<a href="https://github.com/pine64dev/PINE64-Installer">https://github.com/pine64dev/PINE64-Installer</a></li>
+<li><code>PINE64 Installler</code> を起動して、OS選択画面で <code>Ubuntu 18.04 Bionic minimal 64bit Image (build 0.7.9-1067)</code>を選択します。<ul>
 <li>これは、CUIのみのイメージです。</li>
 <li>GUIが欲しい場合は「LXDE版」を選べばよさそう。</li>
+</ul>
+</li>
 <li>「Flash」釦を選択し、書き込みを開始します。</li>
 </ol>
 <h3 id="_2">起動する</h3>
@@ -752,20 +810,21 @@
 <h2 id="_4">初期設定</h2>
 <h3 id="_5">パッケージ一覧を更新</h3>
 <p><code>apt-get</code> コマンドを使って、インストール可能なパッケージ一覧を更新します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt-get update   <span style="color: #888888"># インストール可能なパッケージ一覧を更新</span>
-$ dpkg -l               <span style="color: #888888"># インストール済みパッケージを確認</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo apt-get update
+</code></pre></div>
+</td></tr></table>
+<p>インストール済みパッケージを確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>dpkg -l
 </code></pre></div>
 </td></tr></table>
 <h3 id="_6">日本に対応する</h3>
 <h4 id="_7">キーボードレイアウトを変更する</h4>
 <p>キーボードレイアウトを日本語に変更します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo dpkg-reconfigure keyboard-configuration
-<span style="color: #888888"># コンフィグ画面が表示される</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo dpkg-reconfigure keyboard-configuration
 </code></pre></div>
 </td></tr></table>
-<p>コンフィグ画面では、以下の順に選択していきます。</p>
+<p>上記コマンドを入力するとコンフィグ画面が表示されます。
+コンフィグ画面では、以下の順に選択していきます。</p>
 <ol>
 <li>「Generic 105-key PC (intl.)」</li>
 <li>「Japanese」</li>
@@ -775,66 +834,62 @@ $ dpkg -l               <span style="color: #888888"># インストール済み�
 </ol>
 <h4 id="_8">ロケールを変更する</h4>
 <p>ロケールを <code>ja_JP.UTF-8</code> に変更します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo dpkg-reconfigure locales
-<span style="color: #888888"># コンフィグ画面が表示される</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo dpkg-reconfigure locales
 </code></pre></div>
 </td></tr></table>
-<p>コンフィグ画面では、スペースキーでチェックボックスに対して入力します。</p>
+<p>上記コマンドを入力するとコンフィグ画面が表示されます。
+コンフィグ画面では、スペースキーでチェックボックスに対して入力します。</p>
 <h4 id="_9">タイムゾーンを変更する</h4>
 <p>タイムゾーンを日本に変更します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ timedatectl set-timezone Asia/Tokyo
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>timedatectl set-timezone Asia/Tokyo
 </code></pre></div>
 </td></tr></table>
 <h3 id="_10">ユーザを追加する</h3>
 <p><code>adduser</code> コマンドを使います。
 同じようなコマンドで <code>useradd</code> コマンドがありますが、ホームディレクトリを作ってくれないため使用しません。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ cat /etc/passwd                   <span style="color: #888888"># ユーザ一覧</span>
-$ sudo adduser <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span>           <span style="color: #888888"># 新規ユーザ追加</span>
-$ sudo gpasswd -a <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span> sudo   <span style="color: #888888"># sudo権限付与（sudoグループに追加）</span>
-$ su - <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span>                   <span style="color: #888888"># ユーザ切り替え</span>
+<p>新規ユーザを追加します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo adduser <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>sudoグループにユーザを追加して、sudo権限を付与します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo gpasswd -a <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span> sudo
+</code></pre></div>
+</td></tr></table>
+<p>ユーザ一覧を確認して、作成したユーザが存在することを確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>cat /etc/passwd
 </code></pre></div>
 </td></tr></table>
 <h3 id="ip">固定IPアドレスを設定する</h3>
-<p>OSは Ubuntu18.04 なので、ネットワーク設定方法は <code>netplan</code> を使用します。
-<code>netplan</code> については以下のページを参照してください。</p>
-<ul>
-<li><a href="../ubuntu/2021-05-01-ubuntu_network_netplan.md">Ubuntuのネットワーク接続コマンド - netplan</a></li>
-</ul>
+<p>Ubuntu18.04 なので、ネットワーク設定は <code>netplan</code> を使用します。</p>
 <h4 id="_11">現在のネットワーク設定を確認する</h4>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ ip addr      <span style="color: #888888"># ネットワークインターフェース名とIPアドレスを確認する</span>
-$ route -n     <span style="color: #888888"># ゲートウェイを確認する</span>
-$ sudo systemd-resolve --status | grep <span style="background-color: #fff0f0">&quot;DNS Servers&quot;</span>  <span style="color: #888888"># DNSネームサーバの確認</span>
+<p>ネットワークインターフェース名とIPアドレスを確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>ip addr
+</code></pre></div>
+</td></tr></table>
+<p>ゲートウェイを確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>route -n
+</code></pre></div>
+</td></tr></table>
+<p>DNSネームサーバの確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo systemd-resolve --status | grep <span style="background-color: #fff0f0">&quot;DNS Servers&quot;</span>
 </code></pre></div>
 </td></tr></table>
 <h4 id="_12">ネットワーク設定を変更する</h4>
-<p>初期設定である <code>eth0.yaml</code> を残しつつ、設定を変更したいため、以下のような操作を行います。</p>
+<p>初期設定である <code>eth0.yaml</code> を残しつつ設定を変更したいため、以下のような操作を行います。</p>
 <ul>
 <li><code>eth0.yaml</code> をDHCP設定用のものとして、<code>00_eth0_dhcp.yaml</code> にリネームします。</li>
 <li>固定IPアドレス設定ファイルとして、<code>01_eth0_static.yaml</code> を作成します。</li>
 </ul>
-<p>以下はそのときのコマンド入力です。</p>
+<p>以下のようなコマンド入力になります。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #007020">cd</span> /etc/netplan
-$ sudo mv eth0.yaml 00_eth0_dhcp.yaml                 <span style="color: #888888"># 初期設定を取っておく</span>
-$ sudo cp -fpr 00_eth0_dhcp.yaml 01_eth0_static.yaml  <span style="color: #888888"># 固定IPアドレス設定ファイルを作成</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020">cd</span> /etc/netplan
+sudo mv eth0.yaml 00_eth0_dhcp.yaml
+sudo cp -fpr 00_eth0_dhcp.yaml 01_eth0_static.yaml
 </code></pre></div>
 </td></tr></table>
-<p>固定IPアドレス設定として、以下の内容を <code>01_eth0_static.yaml</code> に反映します。</p>
-<ul>
-<li>ネットワークインタフェース： eth0</li>
-<li>アドレス： 192.168.0.10</li>
-<li>ネットマスク： 255.255.255.0（ビット指定だと「/24」）</li>
-<li>ゲートウェイ： 192.168.0.1</li>
-<li>DNSネームサーバ： 192.168.0.1</li>
-</ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<p>固定IPアドレスの設定を <code>01_eth0_static.yaml</code> に反映します。</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/netplan/01_eth0_static.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -845,36 +900,51 @@ $ sudo cp -fpr 00_eth0_dhcp.yaml 01_eth0_static.yaml  <span style="color: #88888
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">network</span>:
-<span style="color: #007700">version</span>: 2
-<span style="color: #007700">renderer</span>: networkd
-<span style="color: #007700">ethernets</span>:
-<span style="color: #007700">eth0</span>:
-    <span style="color: #007700">addresses</span>: [<span style="color: #996633">192.168.0.10/24</span>]
-    <span style="color: #007700">gateway4</span>: 192.168.1.1
-    <span style="color: #007700">nameservers</span>:
-    <span style="color: #007700">addresses</span>: [<span style="color: #996633">192.168.1.1</span>]
-    <span style="color: #007700">search</span>: []
-    <span style="color: #007700">optional</span>: true
+  <span style="color: #007700">version</span>: 2
+  <span style="color: #007700">renderer</span>: networkd
+  <span style="color: #007700">ethernets</span>:
+    <span style="color: #007700">eth0</span>:
+        <span style="color: #007700">addresses</span>: [<span style="color: #996633">192.168.0.10/24</span>]
+        <span style="color: #007700">gateway4</span>: 192.168.1.1
+        <span style="color: #007700">nameservers</span>:
+        <span style="color: #007700">addresses</span>: [<span style="color: #996633">192.168.1.1</span>]
+        <span style="color: #007700">search</span>: []
+        <span style="color: #007700">optional</span>: true
 </code></pre></div>
 </td></tr></table>
-<h3 id="_13">リモートログインできるようにする</h3>
-<p>リモートログインしてRock64を操作するために、SSHを導入します。</p>
-<p><code>openssh-server</code> をインストールするだけです。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt-get install openssh-server
+<p>上記は以下のような内容を反映しています。</p>
+<ul>
+<li>ネットワークインタフェース： eth0</li>
+<li>アドレス： 192.168.0.10</li>
+<li>ネットマスク： 255.255.255.0（ビット指定だと「/24」）</li>
+<li>ゲートウェイ： 192.168.0.1</li>
+<li>DNSネームサーバ： 192.168.0.1</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">yamlファイルの読み込み優先順</p>
+<p>複数のYAMLファイルを配置すると、ファイル名を辞書順に読み込んで設定がマージされます。
+そのため、ファイル先頭に連番を振り、設定が上書きされるようにします。
+例えば、<code>00-installer-config.yaml</code> と <code>01-my-config.yaml</code> を配置すると、<code>01-my-config.yaml</code> の設定が優先されます。</p>
+</div>
+<h4 id="_13">ネットワーク設定を反映する</h4>
+<p>以下のコマンドを入力して、設定を適用します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>netplan apply
 </code></pre></div>
 </td></tr></table>
-<p>SSHログインができるか試します。ログインできれば、マウスとキーボードは不要になります。</p>
-<h2 id="_14">共有フォルダ</h2>
-<p>sambaをインストールします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt-get install samba
+<h3 id="_14">リモートログインできるようにする</h3>
+<p>リモートログインしてRock64を操作するために、<code>openssh-server</code> をインストールします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo apt-get install openssh-server
 </code></pre></div>
 </td></tr></table>
-<p>sambaグループにユーザ登録します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo pdbedit -a &lt;user_name&gt;
+<p>SSHログインができるか試します。
+ログインできれば、マウスとキーボードは不要になります。</p>
+<h2 id="_15">共有フォルダを設定する</h2>
+<p><code>samba</code> をインストールします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo apt-get install samba
 </code></pre></div>
 </td></tr></table>
-<p>以下は実行例です。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<p>sambaの設定ファイルを変更します。</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/samba/smb.conf</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -894,56 +964,33 @@ $ sudo cp -fpr 00_eth0_dhcp.yaml 01_eth0_static.yaml  <span style="color: #88888
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo pdbedit -a odani
-new password:
-retype new password:
-Unix username:        odani
-NT username:
-Account Flags:        <span style="color: #333333">[</span>U          <span style="color: #333333">]</span>
-User SID:             S-1-5-21-850546626-2320128605-3607607440-1000
-Primary Group SID:    S-1-5-21-850546626-2320128605-3607607440-513
-Full Name:
-Home Directory:       <span style="color: #666666; font-weight: bold; background-color: #fff0f0">\\</span>rock64<span style="color: #666666; font-weight: bold; background-color: #fff0f0">\o</span>dani
-HomeDir Drive:
-Logon Script:
-Profile Path:         <span style="color: #666666; font-weight: bold; background-color: #fff0f0">\\</span>rock64<span style="color: #666666; font-weight: bold; background-color: #fff0f0">\o</span>dani<span style="color: #666666; font-weight: bold; background-color: #fff0f0">\p</span>rofile
-Domain:               ROCK64
-Account desc:
-Workstations:
-Munged dial:
-Logon time:           <span style="color: #6600EE; font-weight: bold">0</span>
-Logoff time:          水, <span style="color: #6600EE; font-weight: bold">06</span>  2月 <span style="color: #6600EE; font-weight: bold">2036</span> <span style="color: #6600EE; font-weight: bold">15</span>:06:39 UTC
-Kickoff time:         水, <span style="color: #6600EE; font-weight: bold">06</span>  2月 <span style="color: #6600EE; font-weight: bold">2036</span> <span style="color: #6600EE; font-weight: bold">15</span>:06:39 UTC
-Password last set:    月, <span style="color: #6600EE; font-weight: bold">21</span>  9月 <span style="color: #6600EE; font-weight: bold">2020</span> <span style="color: #6600EE; font-weight: bold">06</span>:13:46 UTC
-Password can change:  月, <span style="color: #6600EE; font-weight: bold">21</span>  9月 <span style="color: #6600EE; font-weight: bold">2020</span> <span style="color: #6600EE; font-weight: bold">06</span>:13:46 UTC
-Password must change: never
-Last bad password   : <span style="color: #6600EE; font-weight: bold">0</span>
-Bad password count  : <span style="color: #6600EE; font-weight: bold">0</span>
-Logon hours         : FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[nas]
+   comment = Network Attached Storage
+   path = /mnt/nas_main
+   force user = odani
+   force group = odani
+   create mode = 0664
+   directory mode = 0755
+   writable = yes
+   guest ok = no
+   public = yes
+
+[shared]
+   comment = Shared Data
+   path = /mnt/shared_data
+   force user = odani
+   force group = odani
+   create mode = 0664
+   directory mode = 0755
+   writable = yes
+   guest ok = no
+   public = yes
 </code></pre></div>
 </td></tr></table>
-<p>設定ファイルを変更します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[nas]
-comment = Network Attached Storage
-path = /mnt/nas_main
-public = yes
-writable = yes
-guest ok = yes
-create mask = 0777
+<p>設定を反映します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo service smbd restart
 </code></pre></div>
 </td></tr></table>
-<p>なんか思考錯誤中。。</p>
                 
                   
                 
@@ -981,13 +1028,13 @@ create mask = 0777
       
       
         
-        <a href="../rock64_use_external_hdd/" class="md-footer__link md-footer__link--next" aria-label="次: Rock64で外付けHDDを使用する" rel="next">
+        <a href="../20_how_to_use_external_hdd/" class="md-footer__link md-footer__link--next" aria-label="次: 外付けHDDを使用する" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Rock64で外付けHDDを使用する
+              外付けHDDを使用する
             </div>
           </div>
           <div class="md-footer__button md-icon">
