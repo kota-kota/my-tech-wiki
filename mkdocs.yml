@@ -7,6 +7,7 @@ theme:
   language: 'ja'
   features:
     - navigation.expand
+  custom_dir: 'custom_dir'
 extra:
   search:
     language: 'jp'
