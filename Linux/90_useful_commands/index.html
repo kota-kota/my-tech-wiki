@@ -14,7 +14,7 @@
     
     
       
-        <title>mkdocs 参考サイト - My Technical Wiki</title>
+        <title>Linuxの便利なコマンド - My Technical Wiki</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              mkdocs 参考サイト
+              Linuxの便利なコマンド
             
           </span>
         </div>
@@ -216,14 +221,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -246,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_mkdocs_settings/" class="md-nav__link">
+      <a href="../../Documentation/00_mkdocs_settings/" class="md-nav__link">
         mkdocs を設定する
       </a>
     </li>
@@ -258,19 +261,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Documentation/90_mkdocs_reference/" class="md-nav__link">
         mkdocs 参考サイト
       </a>
-      
     </li>
   
 
@@ -282,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../99_mkdocs_test/" class="md-nav__link">
+      <a href="../../Documentation/99_mkdocs_test/" class="md-nav__link">
         mkdocs テスト
       </a>
     </li>
@@ -302,12 +297,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -328,11 +325,49 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Linux/90_useful_commands/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linuxの便利なコマンド
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Linuxの便利なコマンド
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    指定したディレクトリ配下のパーミッションを一括で変更する
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,36 +504,59 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    指定したディレクトリ配下のパーミッションを一括で変更する
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Documentation/90_mkdocs_reference.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Linux/90_useful_commands.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>mkdocs 参考サイト</h1>
+                  <h1>Linuxの便利なコマンド</h1>
                 
-                <ul>
-<li>
-<p>mkdocs の設定など、デザインとか参考にさせてもらった<br />
-<a href="https://fereria.github.io/reincarnation_tech/10_Programming/99_Documentation/00_mkdocs_setting/">https://fereria.github.io/reincarnation_tech/10_Programming/99_Documentation/00_mkdocs_setting/</a></p>
-</li>
-<li>
-<p>mkdocs の設定など、参考にできるのが多そう<br />
-<a href="https://dev.classmethod.jp/articles/mkdocs-and-material-for-mkdocs-tips-matome/">https://dev.classmethod.jp/articles/mkdocs-and-material-for-mkdocs-tips-matome/</a></p>
-</li>
-<li>
-<p>Material for MkDocs 設定項目一覧<br />
-<a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/">https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/</a></p>
-</li>
-<li>
-<p>Material for MkDocs リファレンス一覧<br />
-<a href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/">https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</a></p>
-</li>
-</ul>
+                <h2 id="_1">指定したディレクトリ配下のパーミッションを一括で変更する</h2>
+<p>ファイルのパーミッションを <code>664</code> に一括で変更する</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>find ./ -type f -print0 | xargs -0 chmod <span style="color: #6600EE; font-weight: bold">664</span>
+</code></pre></div>
+</td></tr></table>
+<p>ディレクトリのパーミッションを <code>755</code> に一括で変更する</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>find ./ -type d -print0 | xargs -0 chmod <span style="color: #6600EE; font-weight: bold">755</span>
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -520,7 +578,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../00_mkdocs_settings/" class="md-footer__link md-footer__link--prev" aria-label="前: mkdocs を設定する" rel="prev">
+        <a href="../../Documentation/99_mkdocs_test/" class="md-footer__link md-footer__link--prev" aria-label="前: mkdocs テスト" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -529,20 +587,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              mkdocs を設定する
+              mkdocs テスト
             </div>
           </div>
         </a>
       
       
         
-        <a href="../99_mkdocs_test/" class="md-footer__link md-footer__link--next" aria-label="次: mkdocs テスト" rel="next">
+        <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-footer__link md-footer__link--next" aria-label="次: Rock64にUbuntu18.04をインストールする" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              mkdocs テスト
+              Rock64にUbuntu18.04をインストールする
             </div>
           </div>
           <div class="md-footer__button md-icon">
