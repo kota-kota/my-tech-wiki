@@ -48,11 +48,28 @@ mkdocs gh-deploy
 
 ## mkdocs.yml
 
+### フッターの編集
+
+カスタムディレクトリを有効にする。
+カスタムディレクトリ配下に置いたhtmlファイルが上書きされる。
+
+```yaml title="mkdocs.yml"
+theme:
+  custom_dir: 'custom_dir'
+```
+
+Material for MkDocsのフッターボディは以下にある。  
+<https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/footer.html>
+
+フッターボディを編集したい場合は、上記ファイルを `./custom_dir/partials/footer.html` に配置して編集する。
+
+フッターを削除する場合は、空の `./custom_dir/partials/footer.html` を作成すればいい。
+
 ### コードハイライト
 
 `pymdownx.highlight` を有効にする。
 
-```yaml
+```yaml title="mkdocs.yml"
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
