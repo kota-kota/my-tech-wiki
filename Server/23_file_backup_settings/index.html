@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>My Technical Wiki</title>
+        <title>ファイルのバックアップ設定を行う - My Technical Wiki</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
     
       
@@ -55,7 +55,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#top" class="md-skip">
+        <a href="#rsync" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -76,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+    <a href="../.." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Top
+              ファイルのバックアップ設定を行う
             
           </span>
         </div>
@@ -176,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+    <a href="../.." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -206,21 +206,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Top
       </a>
-      
     </li>
   
 
@@ -259,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Documentation/00_mkdocs_settings/" class="md-nav__link">
+      <a href="../../Documentation/00_mkdocs_settings/" class="md-nav__link">
         mkdocs を設定する
       </a>
     </li>
@@ -273,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Documentation/90_mkdocs_reference/" class="md-nav__link">
+      <a href="../../Documentation/90_mkdocs_reference/" class="md-nav__link">
         mkdocs 参考サイト
       </a>
     </li>
@@ -287,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Documentation/99_mkdocs_test/" class="md-nav__link">
+      <a href="../../Documentation/99_mkdocs_test/" class="md-nav__link">
         mkdocs テスト
       </a>
     </li>
@@ -307,12 +297,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -335,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
+      <a href="../10_rock64_install_ubuntu1804/" class="md-nav__link">
         Rock64にUbuntu18.04をインストールする
       </a>
     </li>
@@ -349,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/20_how_to_use_external_hdd/" class="md-nav__link">
+      <a href="../20_how_to_use_external_hdd/" class="md-nav__link">
         外付けHDDを使用する
       </a>
     </li>
@@ -363,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/21_firewall_settings/" class="md-nav__link">
+      <a href="../21_firewall_settings/" class="md-nav__link">
         ファイアウォールを設定する
       </a>
     </li>
@@ -377,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/22_ssh_settings/" class="md-nav__link">
+      <a href="../22_ssh_settings/" class="md-nav__link">
         SSHを設定する
       </a>
     </li>
@@ -389,11 +381,56 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Server/23_file_backup_settings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ファイルのバックアップ設定を行う
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ファイルのバックアップ設定を行う
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    rsyncを使用してファイルをバックアップする
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    crontabを使用してバックアップを定期的に実行する
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -405,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/90_router_settings/" class="md-nav__link">
+      <a href="../90_router_settings/" class="md-nav__link">
         外部からアクセスできるようにする
       </a>
     </li>
@@ -437,8 +474,28 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    rsyncを使用してファイルをバックアップする
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    crontabを使用してバックアップを定期的に実行する
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -450,12 +507,52 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/index.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/23_file_backup_settings.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="top">Top</h1>
+                  <h1>ファイルのバックアップ設定を行う</h1>
+                
+                <h2 id="rsync">rsyncを使用してファイルをバックアップする</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>rsync -v -r -p -o -g -t --exclude<span style="color: #333333">={</span>除外ファイル or ディレクトリ<span style="color: #333333">}</span> --delete --log-file<span style="color: #333333">={</span>ログファイルパス<span style="color: #333333">}</span> <span style="color: #333333">{</span>同期元<span style="color: #333333">}</span> <span style="color: #333333">{</span>同期先<span style="color: #333333">}</span>
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><code>-v (--verbose)</code> : 処理の経過を表示する</li>
+<li><code>-r (--recursive)</code> : 再帰的にコピーする</li>
+<li><code>-p (--perms)</code> : パーミッションを保持する</li>
+<li><code>-o (--owner)</code> : 所有者をそのまま保持する</li>
+<li><code>-g (--group)</code> : 所有グループをそのまま保持する</li>
+<li><code>-t (--times)</code> : タイムスタンプを保持する</li>
+<li><code>--exclude=</code> : ファイルやディレクトリを除外する</li>
+<li><code>--delete</code> : 同期元にないファイルを同期先から削除する</li>
+<li><code>--log-file=</code> : ログを書き出す</li>
+</ul>
+<h2 id="crontab">crontabを使用してバックアップを定期的に実行する</h2>
+<p>rsyncコマンドを記載したシェルスクリプトを用意します。
+以下は自分が実際に作成したシェルスクリプトです。</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">~/backup.sh</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>#!/bin/bash
+rsync -v -r -p -o -g -t --exclude=&#39;lost+found&#39; --delete --log-file=~/backup_log/rsync-`date +&quot;%Y%m%d-%H%M&quot;`.log /mnt/nas_main/ /mnt/shared_data
+</code></pre></div>
+</td></tr></table>
+<p>上記シェルスクリプトを定期的に実行する設定を <code>cron.conf</code> に記載する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020">echo</span> <span style="background-color: #fff0f0">&#39;0 2 * * * ~/backup.sh&#39;</span> &gt; cron.conf
+</code></pre></div>
+</td></tr></table>
+<p><code>0 2 * * *</code> は、毎日午前2時に実行する設定になります。</p>
+<p><code>cron.conf</code> に書かれた設定を反映する。
+<code>-u {ユーザ名}</code> は、指定したユーザで実行するオプションです。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>crontab -u <span style="color: #333333">{</span>ユーザ名<span style="color: #333333">}</span> cron.conf
+</code></pre></div>
+</td></tr></table>
+<p>設定が反映されていることを確認する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>crontab -l
+</code></pre></div>
+</td></tr></table>
+                
+                  
                 
               
               
@@ -474,15 +571,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
+        
+        <a href="../22_ssh_settings/" class="md-footer__link md-footer__link--prev" aria-label="前: SSHを設定する" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              SSHを設定する
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="Documentation/00_mkdocs_settings/" class="md-footer__link md-footer__link--next" aria-label="次: mkdocs を設定する" rel="next">
+        <a href="../90_router_settings/" class="md-footer__link md-footer__link--next" aria-label="次: 外部からアクセスできるようにする" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              mkdocs を設定する
+              外部からアクセスできるようにする
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -513,10 +625,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
