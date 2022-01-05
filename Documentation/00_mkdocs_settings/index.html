@@ -332,6 +332,13 @@
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    フッターの編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     コードハイライト
   </a>
   
@@ -627,6 +634,13 @@
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    フッターの編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     コードハイライト
   </a>
   
@@ -685,9 +699,21 @@ mkdocs-material は material テーマを使用するために同時にインス
 </code></pre></div>
 </td></tr></table>
 <h2 id="mkdocsyml">mkdocs.yml</h2>
-<h3 id="_5">コードハイライト</h3>
+<h3 id="_5">フッターの編集</h3>
+<p>カスタムディレクトリを有効にする。
+カスタムディレクトリ配下に置いたhtmlファイルが上書きされる。</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">mkdocs.yml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">theme</span>:
+  <span style="color: #007700">custom_dir</span>: <span style="background-color: #fff0f0">&#39;custom_dir&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<p>Material for MkDocsのフッターボディは以下にある。<br />
+<a href="https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/footer.html">https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/footer.html</a></p>
+<p>フッターボディを編集したい場合は、上記ファイルを <code>./custom_dir/partials/footer.html</code> に配置して編集する。</p>
+<p>フッターを削除する場合は、空の <code>./custom_dir/partials/footer.html</code> を作成すればいい。</p>
+<h3 id="_6">コードハイライト</h3>
 <p><code>pymdownx.highlight</code> を有効にする。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">mkdocs.yml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
