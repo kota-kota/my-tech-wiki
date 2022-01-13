@@ -14,7 +14,7 @@
     
     
       
-        <title>ファイアウォールを設定する - My Technical Wiki</title>
+        <title>WindowsにPostgreSQLをインストールする - My Technical Wiki</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ufw" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ファイアウォールを設定する
+              WindowsにPostgreSQLをインストールする
             
           </span>
         </div>
@@ -263,12 +263,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -291,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programming/linux_useful_commands/" class="md-nav__link">
+      <a href="../linux_useful_commands/" class="md-nav__link">
         Linuxの便利なコマンド
       </a>
     </li>
@@ -303,11 +305,90 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Programming/windows_postgresql_server/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WindowsにPostgreSQLをインストールする
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         WindowsにPostgreSQLをインストールする
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストールする
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    サービスの起動と停止
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    データベースへの接続確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    サンプル
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    データベース操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ロール操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -325,14 +406,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -355,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_rock64_install_ubuntu1804/" class="md-nav__link">
+      <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
         Rock64にUbuntu18.04をインストールする
       </a>
     </li>
@@ -369,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../20_how_to_use_external_hdd/" class="md-nav__link">
+      <a href="../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
         外付けHDDを使用する
       </a>
     </li>
@@ -381,96 +460,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ファイアウォールを設定する
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Server/21_firewall_settings/" class="md-nav__link">
         ファイアウォールを設定する
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
-  </a>
-  
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ファイアウォールを有効にする
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -482,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22_ssh_settings/" class="md-nav__link">
+      <a href="../../Server/22_ssh_settings/" class="md-nav__link">
         SSHを設定する
       </a>
     </li>
@@ -496,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../23_file_backup_settings/" class="md-nav__link">
+      <a href="../../Server/23_file_backup_settings/" class="md-nav__link">
         ファイルのバックアップ設定を行う
       </a>
     </li>
@@ -510,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../90_router_settings/" class="md-nav__link">
+      <a href="../../Server/90_router_settings/" class="md-nav__link">
         外部からアクセスできるようにする
       </a>
     </li>
@@ -550,50 +544,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
-  </a>
-  
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    ファイアウォールを有効にする
+    インストールする
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    サービスの起動と停止
   </a>
   
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    データベースへの接続確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    サンプル
+  </a>
+  
+    <nav class="md-nav" aria-label="サンプル">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
+  <a href="#_5" class="md-nav__link">
+    データベース操作
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
+  <a href="#_6" class="md-nav__link">
+    ロール操作
   </a>
   
 </li>
@@ -615,113 +603,112 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/21_firewall_settings.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Programming/windows_postgresql_server.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>ファイアウォールを設定する</h1>
+                  <h1>WindowsにPostgreSQLをインストールする</h1>
                 
-                <h2 id="ufw">簡易ファイアウォール(ufw)</h2>
-<p>パケットフィルタリングできるコマンド <code>iptables</code> を使用すると細かい設定ができるが難しいため、簡易的なファイアウォールを提供する <code>ufw</code> コマンドを使用します。</p>
-<h3 id="_1">ファイアウォールを有効にする</h3>
-<p>ファイアウォールの状態を確認します。
-<code>Status: inactive</code> が無効で、<code>Status: active</code> が有効になります。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw status
+                <h2 id="_1">インストールする</h2>
+<p>PostgreSQL Database Download<br />
+<a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">https://www.enterprisedb.com/downloads/postgres-postgresql-downloads</a></p>
+<p>Windows x86-64 の バージョン 14.1 をインストールします。</p>
+<ul>
+<li>インストールディレクトリ：C:\Program Files\PostgreSQL\14</li>
+<li>インストールするコンポーネントを選択：全て</li>
+<li>データベース作成先のフォルダ：C:\Program Files\PostgreSQL\14\data</li>
+<li>スーパーユーザ <code>postgres</code> のパスワードを指定：postgres</li>
+<li>クライアントからの接続を受けつけるポート番号：5432</li>
+<li>デフォルトのロケールを選択：<code>C</code> を選択（ロケールを使わない設定）</li>
+</ul>
+<p>インストーラの終了後に Stack Builder を起動するか聞かれるので、チェックを外して「Finish」をクリックします。</p>
+<h2 id="_2">サービスの起動と停止</h2>
+<p>「ファイル名を指定して実行」で <code>services.msc</code> と入力し、サービス管理コンソールを起動します。</p>
+<p>サービス一覧から PostgreSQL サービス（サービス名は <code>postgresql-x64-14</code> ）を選択し、右クリックして表示されるメニューからサービスの起動や停止を行います。</p>
+<h2 id="_3">データベースへの接続確認</h2>
+<p>スタートメニューの PostgreSQL フォルダ内の「SQL Shell (SQL)」をクリックし、psql を起動します。</p>
+<p>プロンプトが順番に表示されます。
+角カッコ内がデフォルト値を表しています。</p>
+<ul>
+<li>接続先のホスト名 <code>Server [localhost]</code>：デフォルトのまま</li>
+<li>データベース名 <code>Database [postgres]</code>：デフォルトのまま</li>
+<li>ポート番号 <code>Port [5432]</code>：デフォルトのまま</li>
+<li>ユーザ名 <code>Username [postgres]</code>：デフォルトのまま</li>
+<li>クライアント側のエンコーディング <code>Client Encoding [SJIS]</code>：デフォルトのまま</li>
+<li>パスワード：インストール時に指定したもの</li>
+</ul>
+<p>データベースに正常に接続できると、psql のプロンプト <code>postgres=#</code> が表示されます。</p>
+<h2 id="_4">サンプル</h2>
+<h3 id="_5">データベース操作</h3>
+<p>データベース一覧を表示する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>postgres=# \l
 </code></pre></div>
 </td></tr></table>
-<p>ファイアウォールを有効にします。</p>
+<p>データベースを作成する。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw <span style="color: #007020">enable</span>
-Firewall is active and enabled on system startup
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>postgres=# CREATE DATABASE mydb;
+CREATE DATABASE
 </code></pre></div>
 </td></tr></table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>Command may disrupt existing ssh connections. Proceed with operation (y|n)?</code>
-と聞かれます。SSH接続が出来なくなるけど大丈夫か？という質問なので、<code>y</code> と入力して問題ありません。</p>
-</div>
-<p>ファイアウォールが利用可能なアプリケーションを調べます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw app list
+<p>指定のデータベースに接続する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>postgres=# \c mydb
+データベース&quot;mydb&quot;にユーザー&quot;postgres&quot;として接続しました。
 </code></pre></div>
 </td></tr></table>
-<p>インストールしているアプリによりますが、例えば以下のような結果になります。</p>
+<p>データベースにテーブルを作成する。
+idとnameをもつmytableを作成してみる。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>mydb=# CREATE TABLE mytable (
+mydb(#  id integer,
+mydb(#  name varchar(10)
+mydb(# );
+CREATE TABLE
+</code></pre></div>
+</td></tr></table>
+<p>テーブルの一覧を表示する</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
-  Samba
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>mydb=# \dt
+             リレーション一覧
+ スキーマ |  名前   |  タイプ  |  所有者
+----------+---------+----------+----------
+ public   | mytable | テーブル | postgres
+(1 行)
 </code></pre></div>
 </td></tr></table>
-<h3 id="apache">Apacheのアクセスを許可する</h3>
-<p>Apacheはhttpのみ（ポート80）、Apache Fullはhttpとhttps（ポート443）、Apache Secureはhttpsのみを表しています。
-いずれSSL化したいため、Fullで許可しておきます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow <span style="background-color: #fff0f0">&#39;Apache Full&#39;</span>
+<p>テーブルにデータを追加してみる。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>mydb=# INSERT INTO mytable VALUES (526, &#39;Sasaki&#39;);
+INSERT 0 1
 </code></pre></div>
 </td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
+<p>テーブルの中身を表示してみる。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-Apache Full (v6)           ALLOW       Anywhere (v6)
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>mydb=# SELECT * FROM mytable;
+ id  |  name
+-----+--------
+ 526 | Sasaki
+(1 行)
 </code></pre></div>
 </td></tr></table>
-<h4 id="ipv6">IPv6を無効にする</h4>
-<p>Apacheのアクセスを許可すると、IPv4だけでなくIPv6もアクセス許可されます。
-IPv6は無効にしたいため、<code>/etc/default/ufw</code> を以下のように変更します。</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/default/ufw</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code># Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
-# accepted). You will need to &#39;disable&#39; and then &#39;enable&#39; the firewall for
-# the changes to take affect.
-#IPV6=yes
-IPV6=no
+<p>テーブルを削除する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>mydb=# DROP TABLE mytable;
 </code></pre></div>
 </td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-</code></pre></div>
-</td></tr></table>
-<h3 id="openssh">OpenSSHのアクセスを許可する</h3>
-<p>OpenSSHは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。
-<code>ufw limit OpenSSH</code> でlimitをかける方法もありますが、外部アクセスが必要になったときに考えることにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       192.168.0.0/24
-</code></pre></div>
-</td></tr></table>
-<h3 id="samba">Sambaのアクセスを許可する</h3>
-<p>Sambaは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app Samba
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Samba                      ALLOW       192.168.0.0/24
+<h3 id="_6">ロール操作</h3>
+<p>パスワードを変更する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>postgres=# ALTER ROLE xxxx with password &#39;??????&#39;;
 </code></pre></div>
 </td></tr></table>
                 
