@@ -1,5 +1,5 @@
 ---
-title: mkdocs テスト
+title: Mkdocsプラグインの記述テスト
 ---
 
 ## pymdownx.keys

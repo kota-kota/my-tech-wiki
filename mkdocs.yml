@@ -26,3 +26,5 @@ markdown_extensions:
   - pymdownx.snippets
 extra_css:
   - "css/custom.css"
+plugins:
+  - awesome-pages
