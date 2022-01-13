@@ -1,6 +1,4 @@
----
-title: ファイアウォールを設定する
----
+# ファイアウォールを設定する
 
 ## 簡易ファイアウォール(ufw)
 
@@ -82,7 +80,6 @@ To                         Action      From
 Apache Full                ALLOW       Anywhere
 ```
 
-
 ### OpenSSHのアクセスを許可する
 
 OpenSSHは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。
@@ -98,6 +95,58 @@ sudo ufw allow from 192.168.0.0/24 to any app OpenSSH
 To                         Action      From
 --                         ------      ----
 OpenSSH                    ALLOW       192.168.0.0/24
+```
+
+#### SSHポート番号を変更する
+
+SSHポート番号をデフォルト22から2022へ変更します。
+
+`/etc/ssh/sshd_config` のバックアップを取り、以下を追記します。
+
+```text
+#Port 22
+Port 2022
+```
+
+sshを再起動。
+
+```bash
+sudo systemctl restart sshd
+```
+
+#### ファイアウォールで新ポート2022を公開する
+
+まず、プロファイルを作成します。
+`/etc/ufw/applications.d/myssh` を新規作成して、以下のように記述します。
+
+```text
+[myssh]
+title=My SSH
+description=This is used by My SSH
+ports=2022/tcp
+```
+
+ファイアウォールで新ポート2022を公開します。
+
+```bash
+sudo ufw allow from 192.168.0.0/24 to any app myssh
+```
+
+旧ポート22(OpenSSH)は削除します。
+
+```bash
+sudo ufw delete allow OpenSSH
+```
+
+`sudo ufw status` で状態を確認します。
+
+```bash
+$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+myssh                      ALLOW       192.168.0.0/24
 ```
 
 ### Sambaのアクセスを許可する
