@@ -1,0 +1,1725 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Dockerを使ってみた - My Technical Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Technical Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dockerを使ってみた
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Technical Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        トップページ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          開発環境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="開発環境" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          開発環境
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/docker/" class="md-nav__link">
+        Dockerをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/git/" class="md-nav__link">
+        Gitの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/linux_shell/" class="md-nav__link">
+        Linuxシェルの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/postgresql/" class="md-nav__link">
+        PostgreSQLをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/ubuntu_other_settings/" class="md-nav__link">
+        Ubuntuの様々な設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/vim/" class="md-nav__link">
+        Vimの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/vscode/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevelopmentEnvironment/wsl2_ubuntu2004/" class="md-nav__link">
+        Windows 10 に WSL2 + Ubuntu 20.04 LTS を導入する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/00_mkdocs_install/" class="md-nav__link">
+        Mkdocsをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/01_mkdocs_settings/" class="md-nav__link">
+        Mkdocsをカスタマイズする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/99_mkdocs_plugin_test/" class="md-nav__link">
+        Mkdocsプラグインの記述テスト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="プログラミング" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dockerを使ってみた
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dockerを使ってみた
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    コマンド
+  </a>
+  
+    <nav class="md-nav" aria-label="コマンド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    省略系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version：バージョンを確認する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info：環境情報を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    images：取得済みイメージの一覧を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    ps：コンテナ一覧を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchdocker-hub" class="md-nav__link">
+    search：Docker Hub のイメージを検索する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulldocker-hub" class="md-nav__link">
+    pull：Docker Hub からイメージを取得する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run：イメージからコンテナを生成して起動する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec" class="md-nav__link">
+    exec：コンテナ内でコマンドを実行する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startstop" class="md-nav__link">
+    start/stop：コンテナの起動/停止する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    commit：コンテナからイメージを作成する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm：コンテナを削除する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmi" class="md-nav__link">
+    rmi：イメージを削除する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_how_to_use/" class="md-nav__link">
+        Gitコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_commands/" class="md-nav__link">
+        Linuxコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_shortcuts/" class="md-nav__link">
+        Linuxショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql_how_to_use/" class="md-nav__link">
+        PostgreSQLを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode_shortcuts/" class="md-nav__link">
+        VSCodeショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          サーバ構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="サーバ構築" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          サーバ構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
+        Rock64にUbuntu18.04をインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
+        外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/apache_install/" class="md-nav__link">
+        Apacheをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/doxygen_settings/" class="md-nav__link">
+        Doxygenの設定ファイルまとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/github_authentication/" class="md-nav__link">
+        GitHubの認証に個人アクセストークンとSSHキーを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/githubpages_minimal_mistakes/" class="md-nav__link">
+        GitHub Pages + Minimal Mistakes を導入する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/php_install/" class="md-nav__link">
+        PHPをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/study_about_float/" class="md-nav__link">
+        勉強：浮動小数点について
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/virtualbox_settings/" class="md-nav__link">
+        VirtualBoxの設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" data-md-state="indeterminate" type="checkbox" id="__nav_6_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          Dokuwiki
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dokuwiki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          Dokuwiki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_install/" class="md-nav__link">
+        Dokuwikiをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_plugins/" class="md-nav__link">
+        Dokuwikiに導入したプラグイン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_settings/" class="md-nav__link">
+        Dokuwikiの各種設定をまとめる
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" data-md-state="indeterminate" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Nextcloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nextcloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Nextcloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_install/" class="md-nav__link">
+        NextCloudをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+        NextCloudで外部ストレージを利用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+        NextCloudのDockerイメージでsmbclientを使用する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    コマンド
+  </a>
+  
+    <nav class="md-nav" aria-label="コマンド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    省略系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version：バージョンを確認する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info：環境情報を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    images：取得済みイメージの一覧を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    ps：コンテナ一覧を表示する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchdocker-hub" class="md-nav__link">
+    search：Docker Hub のイメージを検索する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulldocker-hub" class="md-nav__link">
+    pull：Docker Hub からイメージを取得する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run：イメージからコンテナを生成して起動する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec" class="md-nav__link">
+    exec：コンテナ内でコマンドを実行する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startstop" class="md-nav__link">
+    start/stop：コンテナの起動/停止する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    commit：コンテナからイメージを作成する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm：コンテナを削除する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmi" class="md-nav__link">
+    rmi：イメージを削除する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Programming/docker_how_to_use.md" title="編集" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Dockerを使ってみた</h1>
+                
+                <h2 id="_1">コマンド</h2>
+<p>参考サイト - Dockerコマンド<br />
+<a href="https://qiita.com/k5n/items/2212b87feac5ebc33ecb">https://qiita.com/k5n/items/2212b87feac5ebc33ecb</a></p>
+<h3 id="_2">省略系</h3>
+<p><code>docker --help</code> で用意されているコマンドをみると、<code>Management Commands:</code> と <code>Commands:</code> の2種類ある。
+<code>Commands:</code> は <code>Management Commands:</code> の省略系なので、複雑なことをやりたい場合は <code>Management Commands:</code> を使わないといけない。</p>
+<table>
+<thead>
+<tr>
+<th>Commands利用</th>
+<th>Management Commands利用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker pull</td>
+<td>docker image pull</td>
+</tr>
+<tr>
+<td>docker images</td>
+<td>docker image ls</td>
+</tr>
+<tr>
+<td>docker rmi</td>
+<td>docker image rm</td>
+</tr>
+<tr>
+<td>docker ps</td>
+<td>docker container ls</td>
+</tr>
+<tr>
+<td>docker ps -a</td>
+<td>docker container ls --all</td>
+</tr>
+<tr>
+<td>docker rm</td>
+<td>docker container rm</td>
+</tr>
+<tr>
+<td>docker commit</td>
+<td>docker container commit</td>
+</tr>
+<tr>
+<td>docker run</td>
+<td>docker container run</td>
+</tr>
+<tr>
+<td>docker start</td>
+<td>docker container start</td>
+</tr>
+<tr>
+<td>docker stop</td>
+<td>docker container stop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="version">version：バージョンを確認する</h3>
+<p>バージョンの確認で、簡易的な情報だけ表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker --version
+Docker version <span style="color: #6600EE; font-weight: bold">19</span>.03.6, build 369ce74a3c
+</code></pre></div>
+</td></tr></table>
+<p>詳細な情報も全て表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker version
+Client:
+ Version:           <span style="color: #6600EE; font-weight: bold">19</span>.03.6
+ API version:       <span style="color: #6600EE; font-weight: bold">1</span>.40
+ Go version:        go1.12.17
+ Git commit:        369ce74a3c
+ Built:             Fri Dec <span style="color: #6600EE; font-weight: bold">18</span> <span style="color: #6600EE; font-weight: bold">12</span>:25:49 <span style="color: #6600EE; font-weight: bold">2020</span>
+ OS/Arch:           linux/arm64
+ Experimental:      <span style="color: #007020">false</span>
+
+Server:
+ Engine:
+  Version:          <span style="color: #6600EE; font-weight: bold">19</span>.03.6
+  API version:      <span style="color: #6600EE; font-weight: bold">1</span>.40 <span style="color: #333333">(</span>minimum version <span style="color: #6600EE; font-weight: bold">1</span>.12<span style="color: #333333">)</span>
+  Go version:       go1.12.17
+
+～省略～
+</code></pre></div>
+</td></tr></table>
+<h3 id="info">info：環境情報を表示する</h3>
+<p>Dockerの環境情報を表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker info
+Client:
+ Debug Mode: <span style="color: #007020">false</span>
+
+Server:
+ Containers: <span style="color: #6600EE; font-weight: bold">0</span>
+  Running: <span style="color: #6600EE; font-weight: bold">0</span>
+  Paused: <span style="color: #6600EE; font-weight: bold">0</span>
+  Stopped: <span style="color: #6600EE; font-weight: bold">0</span>
+ Images: <span style="color: #6600EE; font-weight: bold">0</span>
+ Server Version: <span style="color: #6600EE; font-weight: bold">19</span>.03.6
+
+～省略～
+</code></pre></div>
+</td></tr></table>
+<h3 id="images">images：取得済みイメージの一覧を表示する</h3>
+<p>取得済みイメージの一覧を表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              236f3028e59c        <span style="color: #6600EE; font-weight: bold">11</span> hours ago        126MB
+</code></pre></div>
+</td></tr></table>
+<p>上のコマンドは、<code>$ docker pull nginx</code> を実施した直後の結果です。</p>
+<h3 id="ps">ps：コンテナ一覧を表示する</h3>
+<p>実行中のコンテナ一覧を表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker ps
+</code></pre></div>
+</td></tr></table>
+<p>停止中も含めた全てのコンテナ一覧を表示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker ps -a
+</code></pre></div>
+</td></tr></table>
+<h3 id="searchdocker-hub">search：Docker Hub のイメージを検索する</h3>
+<p>Docker Hub にあるイメージを検索します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker search nginx
+NAME                               DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+nginx                              Official build of Nginx.                        <span style="color: #6600EE; font-weight: bold">14645</span>               <span style="color: #333333">[</span>OK<span style="color: #333333">]</span>
+jwilder/nginx-proxy                Automated Nginx reverse proxy <span style="color: #008800; font-weight: bold">for</span> docker con…   <span style="color: #6600EE; font-weight: bold">1998</span>                                    <span style="color: #333333">[</span>OK<span style="color: #333333">]</span>
+richarvey/nginx-php-fpm            Container running Nginx + PHP-FPM capable of…   <span style="color: #6600EE; font-weight: bold">812</span>                                     <span style="color: #333333">[</span>OK<span style="color: #333333">]</span>
+jc21/nginx-proxy-manager           Docker container <span style="color: #008800; font-weight: bold">for</span> managing Nginx proxy ho…   <span style="color: #6600EE; font-weight: bold">168</span>
+linuxserver/nginx                  An Nginx container, brought to you by LinuxS…   <span style="color: #6600EE; font-weight: bold">142</span>
+（省略）
+</code></pre></div>
+</td></tr></table>
+<p>もっと詳しい使い方は以下に記載があります。<br />
+<a href="http://www.memotansu.jp/docker/771/">http://www.memotansu.jp/docker/771/</a></p>
+<h3 id="pulldocker-hub">pull：Docker Hub からイメージを取得する</h3>
+<p>Docker Hub にあるイメージを取得します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+6fcf2156bc23: Pull <span style="color: #007020">complete</span>
+31ca62f63eaf: Pull <span style="color: #007020">complete</span>
+1cd5998f3010: Pull <span style="color: #007020">complete</span>
+b2dd8627b82f: Pull <span style="color: #007020">complete</span>
+c4d503e83445: Pull <span style="color: #007020">complete</span>
+036b0382d2d7: Pull <span style="color: #007020">complete</span>
+Digest: sha256:bae781e7f518e0fb02245140c97e6ddc9f5fcf6aecc043dd9d17e33aec81c832
+Status: Downloaded newer image <span style="color: #008800; font-weight: bold">for</span> nginx:latest
+docker.io/library/nginx:latest
+</code></pre></div>
+</td></tr></table>
+<p>上のコマンドは、<code>$ docker search nginx</code> でヒットしたものです。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>NAME                               DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+nginx                              Official build of Nginx.                        <span style="color: #6600EE; font-weight: bold">14645</span>               <span style="color: #333333">[</span>OK<span style="color: #333333">]</span>
+</code></pre></div>
+</td></tr></table>
+<p>を取得しています。
+未取得のイメージなのでダウンロードのログが出ていますが、取得済みであれば出ません。</p>
+<h3 id="run">run：イメージからコンテナを生成して起動する</h3>
+<p>イメージからコンテナを作成して起動します。生成と起動を一度に行うコマンドです。</p>
+<p>以下のコマンドはnginxイメージを例にしています。
+<code>nginx/log</code> を作成しているのは、nginxのログをホスト側のディレクトリに出力するテストをするためです。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ mkdir -p nginx/log
+$ docker run -d -p <span style="color: #6600EE; font-weight: bold">80</span>:80 -v <span style="color: #008800; font-weight: bold">$(</span><span style="color: #007020">pwd</span><span style="color: #008800; font-weight: bold">)</span>/nginx/log:/var/log/nginx --name webserver nginx
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><code>-d</code>：バックグラウンド実行することを指定しています。</li>
+<li><code>-p 80:80</code>：ホスト側の80番ポートをコンテナ側の80番ポートに転送するように指定しています。<code>-p 8080:80</code> と指定すれば <a href="http://localhost:8080">http://localhost:8080</a> でアクセスできるようになります。</li>
+<li><code>-v $(pwd)/nginx/log:/var/log/nginx</code>：ホストのディレクトリ <code>$(pwd)/nginx/log</code> をコンテナのディレクトリ <code>/var/log/nginx</code> としてマウントします。ホスト側のディレクトリも絶対パスで指定する必要があります。</li>
+<li><code>--name webserver</code>：生成するコンテナの名前を指定します。指定しないとコンテナIDを利用することになります。</li>
+<li><code>nginx</code>：コンテナ生成に使用するイメージの名前です。</li>
+</ul>
+<p>本当は最後（イメージ名の後）に実行するコマンドを指定する のですが、nginx のイメージはデフォルトで nginx を起動するコマンドが実行されるようになっているため必要ありません。</p>
+<p><a href="http://localhost">http://localhost</a> にアクセスすれば、"Welcome to nginx!"のページが表示されるはずです。</p>
+<p>ホスト側でアクセスログ <code>$ cat nginx/log/access.log</code> が確認できます。</p>
+<h3 id="exec">exec：コンテナ内でコマンドを実行する</h3>
+<p>指定したコンテナで指定したコマンドを実行します。</p>
+<p>コンテナ内でコマンドライン作業を実施してみます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker <span style="color: #007020">exec</span> -it webserver /bin/bash
+root@a9dbfe817edd:/#
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><code>-it</code>：コンテナ側のコマンドの入出力を手元のターミナルに接続します。</li>
+<li><code>webserver</code>：コンテナの名前です。</li>
+<li><code>/bin/bash</code>：実行するコマンドです。</li>
+</ul>
+<p>上記コマンドを実行すると、root でログインした状態でコマンドプロンプトが表示されます。</p>
+<p><code>exec</code> で接続した場合は、<code>exit</code> してもコンテナは起動したままになります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>root@a9dbfe817edd:/# <span style="color: #007020">exit</span>
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+a9dbfe817edd        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">6</span> minutes ago       Up <span style="color: #6600EE; font-weight: bold">6</span> minutes        <span style="color: #6600EE; font-weight: bold">0</span>.0.0.0:82-&gt;80/tcp   webserver
+</code></pre></div>
+</td></tr></table>
+<p><code>-it</code>は、以下のようにコマンドを実行するだけであれば不要です。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker <span style="color: #007020">exec</span> webserver ls /etc/nginx
+conf.d
+fastcgi_params
+koi-utf
+koi-win
+mime.types
+modules
+nginx.conf
+scgi_params
+uwsgi_params
+win-utf
+</code></pre></div>
+</td></tr></table>
+<h3 id="startstop">start/stop：コンテナの起動/停止する</h3>
+<p>コンテナを起動・停止します。</p>
+<p><code>webserver</code> というコンテナを停止して、<code>docker ps</code> で確認してみます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+a9dbfe817edd        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">10</span> minutes ago      Up <span style="color: #6600EE; font-weight: bold">5</span> seconds        <span style="color: #6600EE; font-weight: bold">0</span>.0.0.0:82-&gt;80/tcp   webserver
+$ docker stop webserver
+webserver
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+a9dbfe817edd        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">11</span> minutes ago      Exited <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">0</span><span style="color: #333333">)</span> <span style="color: #6600EE; font-weight: bold">18</span> seconds ago                       webserver
+</code></pre></div>
+</td></tr></table>
+<p>そして、再度起動してみます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker start webserver
+webserver
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+a9dbfe817edd        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">12</span> minutes ago      Up <span style="color: #6600EE; font-weight: bold">1</span> second         <span style="color: #6600EE; font-weight: bold">0</span>.0.0.0:82-&gt;80/tcp   webserver
+</code></pre></div>
+</td></tr></table>
+<h3 id="commit">commit：コンテナからイメージを作成する</h3>
+<p>コンテナからイメージを作成します。</p>
+<p>イメージの命名規則は <code>&lt;Docker Hubのユーザ名&gt;/イメージ名:[タグ名]</code> ですが、Docker Hubに公開しない（<code>push</code>しない）なら、ユーザ名は不要です。</p>
+<p><code>webserver</code> コンテナから別のイメージ（<code>Welcome to nginx!</code> ではなく、<code>Hello, nginx!</code> を表示するもの）を作成してみます。
+nginxのデフォルトのindex.htmlは、<code>/usr/share/nginx/html/index.html</code> にあるため、これを書き換えます。</p>
+<p><code>webserver</code> コンテナにある<code>/usr/share/nginx/html/index.html</code> をホスト側にコピーして、内容を書き換えます。
+それを再度コンテナ側にコピーします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker cp webserver:/usr/share/nginx/html/index.html .
+$ vim index.html
+$ docker cp index.html webserver:/usr/share/nginx/html/index.html
+$ docker <span style="color: #007020">exec</span> webserver cat /usr/share/nginx/html/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello, nginx!&lt;/title&gt;
+&lt;style&gt;
+    body <span style="color: #333333">{</span>
+        width: 35em;
+        margin: <span style="color: #6600EE; font-weight: bold">0</span> auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    <span style="color: #333333">}</span>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, nginx!&lt;/h1&gt;
+&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.&lt;/p&gt;
+
+&lt;p&gt;For online documentation and support please refer to
+&lt;a <span style="color: #996633">href</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;http://nginx.org/&quot;</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+Commercial support is available at
+&lt;a <span style="color: #996633">href</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;http://nginx.com/&quot;</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thank you <span style="color: #008800; font-weight: bold">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+</td></tr></table>
+<p>コンテナからイメージを作成します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker commit webserver webserver:0.0
+sha256:c67e1239fe0b04d788867e38614a52b97b54802c2cbd5be3c8167a7a5558244c
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+webserver           <span style="color: #6600EE; font-weight: bold">0</span>.0                 c67e1239fe0b        <span style="color: #6600EE; font-weight: bold">9</span> seconds ago       126MB
+nginx               latest              236f3028e59c        <span style="color: #6600EE; font-weight: bold">12</span> hours ago        126MB
+</code></pre></div>
+</td></tr></table>
+<p>一度変更を消したいため、<code>webserver</code> コンテナを削除します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker stop webserver
+$ docker rm webserver
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre></div>
+</td></tr></table>
+<p><code>nginx</code> イメージから<code>webserver</code> コンテナを作成します。
+<code>webserver:0.0</code> イメージから<code>webserver2</code> コンテナを作成します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker run -d -p <span style="color: #6600EE; font-weight: bold">81</span>:80 -v <span style="color: #008800; font-weight: bold">$(</span><span style="color: #007020">pwd</span><span style="color: #008800; font-weight: bold">)</span>/nginx/log:/var/log/nginx --name webserver nginx
+b19c47f0c3563181ed68eb7fbb44f8fc6244404cb6cc0ba77eabb537f9aa4690
+$ docker run -d -p <span style="color: #6600EE; font-weight: bold">82</span>:80 -v <span style="color: #008800; font-weight: bold">$(</span><span style="color: #007020">pwd</span><span style="color: #008800; font-weight: bold">)</span>/nginx2/log:/var/log/nginx --name webserver2 webserver:0.0
+ad1be8216656c56a90fd4a1ce916c93275f364f705b4683447e4af6ff69d2984
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+ad1be8216656        webserver:0.0       <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">4</span> seconds ago       Up <span style="color: #6600EE; font-weight: bold">3</span> seconds        <span style="color: #6600EE; font-weight: bold">0</span>.0.0.0:82-&gt;80/tcp   webserver2
+b19c47f0c356        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">28</span> seconds ago      Up <span style="color: #6600EE; font-weight: bold">27</span> seconds       <span style="color: #6600EE; font-weight: bold">0</span>.0.0.0:81-&gt;80/tcp   webserver
+</code></pre></div>
+</td></tr></table>
+<p><a href="http://localhost:81">http://localhost:81</a> は"Welcome to nginx!"が表示され、<a href="http://localhost:82">http://localhost:82</a> は"Hello, nginx!"が表示されるはずです。</p>
+<h3 id="rm">rm：コンテナを削除する</h3>
+<p>コンテナを削除します。</p>
+<p>削除する前にコンテナを停止させます。いきなり削除もできますがちゃんとやります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker stop webserver
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+a9dbfe817edd        nginx               <span style="background-color: #fff0f0">&quot;/docker-entrypoint.…&quot;</span>   <span style="color: #6600EE; font-weight: bold">15</span> minutes ago      Exited <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">0</span><span style="color: #333333">)</span> <span style="color: #6600EE; font-weight: bold">3</span> seconds ago                       webserver
+</code></pre></div>
+</td></tr></table>
+<p>コンテナを削除します。
+<code>docker ps -a</code> コマンドに表示されなくなります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker rm webserver
+webserver
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre></div>
+</td></tr></table>
+<h3 id="rmi">rmi：イメージを削除する</h3>
+<p>イメージを削除します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              236f3028e59c        <span style="color: #6600EE; font-weight: bold">11</span> hours ago        126MB
+$ docker rmi nginx
+Untagged: nginx:latest
+Untagged: nginx@sha256:bae781e7f518e0fb02245140c97e6ddc9f5fcf6aecc043dd9d17e33aec81c832
+Deleted: sha256:236f3028e59c00fb4b99799e2b1e4edd9cc16febc199e456ac1537d6a729f580
+Deleted: sha256:9f0a274fe79bb7668ee42c48f30fb7876b3ca311e125c2b9173bae799a09c1c3
+Deleted: sha256:db874103219bb1721d653c0e5e207c2e91bc46409a6d598849d07f4b5ce3384b
+Deleted: sha256:27e6b8253ff0e7a77c6d4ffa5af2d157c7b9eb7f4a1ca5323f761c0f79ae6be3
+Deleted: sha256:0dcbd6e053c89abe2f79c268dab182e52bbd97ef88cb3f606447231903e8673b
+Deleted: sha256:3bf0dc8405796d8db37ab2d672a770156e494b0f19e66294824bb609d4ae693e
+Deleted: sha256:6e06900bc10223217b4c78081a857866f674c462e4f90593b01894da56df336d
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</code></pre></div>
+</td></tr></table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

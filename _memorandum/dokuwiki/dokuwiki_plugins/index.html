@@ -1,0 +1,1484 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Dokuwikiに導入したプラグイン - My Technical Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dokuwiki" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Technical Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dokuwikiに導入したプラグイン
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Technical Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        トップページ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          開発環境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="開発環境" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          開発環境
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/docker/" class="md-nav__link">
+        Dockerをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/git/" class="md-nav__link">
+        Gitの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/linux_shell/" class="md-nav__link">
+        Linuxシェルの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/postgresql/" class="md-nav__link">
+        PostgreSQLをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/ubuntu_other_settings/" class="md-nav__link">
+        Ubuntuの様々な設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/vim/" class="md-nav__link">
+        Vimの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/vscode/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/wsl2_ubuntu2004/" class="md-nav__link">
+        Windows 10 に WSL2 + Ubuntu 20.04 LTS を導入する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/00_mkdocs_install/" class="md-nav__link">
+        Mkdocsをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/01_mkdocs_settings/" class="md-nav__link">
+        Mkdocsをカスタマイズする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/99_mkdocs_plugin_test/" class="md-nav__link">
+        Mkdocsプラグインの記述テスト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="プログラミング" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/docker_how_to_use/" class="md-nav__link">
+        Dockerを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/git_how_to_use/" class="md-nav__link">
+        Gitコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/linux_commands/" class="md-nav__link">
+        Linuxコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/linux_shortcuts/" class="md-nav__link">
+        Linuxショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/postgresql_how_to_use/" class="md-nav__link">
+        PostgreSQLを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/vscode_shortcuts/" class="md-nav__link">
+        VSCodeショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          サーバ構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="サーバ構築" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          サーバ構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
+        Rock64にUbuntu18.04をインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
+        外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache_install/" class="md-nav__link">
+        Apacheをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen_settings/" class="md-nav__link">
+        Doxygenの設定ファイルまとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_authentication/" class="md-nav__link">
+        GitHubの認証に個人アクセストークンとSSHキーを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../githubpages_minimal_mistakes/" class="md-nav__link">
+        GitHub Pages + Minimal Mistakes を導入する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php_install/" class="md-nav__link">
+        PHPをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study_about_float/" class="md-nav__link">
+        勉強：浮動小数点について
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualbox_settings/" class="md-nav__link">
+        VirtualBoxの設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          Dokuwiki
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dokuwiki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          Dokuwiki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dokuwiki_install/" class="md-nav__link">
+        Dokuwikiをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dokuwikiに導入したプラグイン
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dokuwikiに導入したプラグイン
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#box" class="md-nav__link">
+    Box
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catlist" class="md-nav__link">
+    catList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edittable" class="md-nav__link">
+    EditTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imgpaste" class="md-nav__link">
+    ImgPaste
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexmenu" class="md-nav__link">
+    IndexMenu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move" class="md-nav__link">
+    Move
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagelist" class="md-nav__link">
+    PageList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantumlparser" class="md-nav__link">
+    plantumlparser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxhighlighter4" class="md-nav__link">
+    SyntaxHighlighter4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toctweak" class="md-nav__link">
+    TocTweak
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dokuwiki_settings/" class="md-nav__link">
+        Dokuwikiの各種設定をまとめる
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" data-md-state="indeterminate" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Nextcloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nextcloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Nextcloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_install/" class="md-nav__link">
+        NextCloudをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+        NextCloudで外部ストレージを利用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+        NextCloudのDockerイメージでsmbclientを使用する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#box" class="md-nav__link">
+    Box
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catlist" class="md-nav__link">
+    catList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edittable" class="md-nav__link">
+    EditTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imgpaste" class="md-nav__link">
+    ImgPaste
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexmenu" class="md-nav__link">
+    IndexMenu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move" class="md-nav__link">
+    Move
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagelist" class="md-nav__link">
+    PageList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantumlparser" class="md-nav__link">
+    plantumlparser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxhighlighter4" class="md-nav__link">
+    SyntaxHighlighter4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toctweak" class="md-nav__link">
+    TocTweak
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/_memorandum/dokuwiki/dokuwiki_plugins.md" title="編集" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="dokuwiki">Dokuwikiに導入したプラグイン</h1>
+<p>DokuWikiに導入したプラグインをまとめておきます。</p>
+<h2 id="box">Box</h2>
+<p><a href="https://www.dokuwiki.org/plugin:box">plugin:box</a></p>
+<p>文字を囲む。</p>
+<h2 id="catlist">catList</h2>
+<p><a href="https://www.dokuwiki.org/ja:plugin:catlist">ja:plugin:catlist</a></p>
+<p>再帰的にページと名前空間を一覧表示する。</p>
+<p>例：オプション指定なし</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&lt;catlist&gt;
+</code></pre></div>
+</td></tr></table>
+<p>例：いくつかオプション指定あり</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&lt;catlist -noAddPageButton -noHead -sortAscending -excluns:&quot;secret|playground&quot; -excluPage:&quot;header&quot;&gt;
+</code></pre></div>
+</td></tr></table>
+<h2 id="changes">Changes</h2>
+<p><a href="https://www.dokuwiki.org/plugin:changes">plugin:changes</a></p>
+<p>変更履歴を表示する。</p>
+<p>※以下の例は、Jekyllの変換に失敗するため、<code>{</code> と <code>}</code> のような単一括弧の記載としています。実際に使う場合は、<code>{</code> と <code>}</code> は2重括弧に読み換えてください。</p>
+<p><strong>例：リスト表示</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{changes&gt;render = list}
+</code></pre></div>
+</td></tr></table>
+<p><strong>例：リスト表示（ユーザ名/時刻表示）</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{changes&gt;render = list(signature)}
+</code></pre></div>
+</td></tr></table>
+<p><strong>例：pagelistプラグイン連携</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{changes&gt;render = pagelist}
+</code></pre></div>
+</td></tr></table>
+<p><strong>例：pagelistプラグイン連携（ヘッダ表示）</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{changes&gt;render = pagelist(header)}
+</code></pre></div>
+</td></tr></table>
+<h2 id="color">color</h2>
+<p><a href="https://www.dokuwiki.org/plugin:color">plugin:color</a></p>
+<p>文字に色を付ける。</p>
+<h2 id="edittable">EditTable</h2>
+<p><a href="https://www.dokuwiki.org/plugin:edittable">plugin:edittable</a></p>
+<p>DokuWikiの表をエクセルのように編集できる。</p>
+<h2 id="imgpaste">ImgPaste</h2>
+<p><a href="https://www.dokuwiki.org/plugin:imgpaste">plugin:imgpaste</a></p>
+<p>DokuWikiの文書作成中に、画像をクリップボードから貼り付けることができる。</p>
+<p><strong>使い方</strong></p>
+<ul>
+<li>クリップボードにある画像を <code>Ctrl + V</code> で張り付けることができます。</li>
+<li>画像ファイルは、<code>pasted</code> フォルダに日時を追加して保存されます。</li>
+<li>保存されるファイル名は「サイト設定」から変更できます。</li>
+</ul>
+<h2 id="indexmenu">IndexMenu</h2>
+<p><a href="https://www.dokuwiki.org/plugin:indexmenu">plugin:indexmenu</a></p>
+<p>参考サイト<br />
+<a href="https://dokuwiki.oreda.net/plugin/indexmenu.html">https://dokuwiki.oreda.net/plugin/indexmenu.html</a></p>
+<p>※以下の例は、Jekyllの変換に失敗するため、<code>{</code> と <code>}</code> のような単一括弧の記載としています。実際に使う場合は、<code>{</code> と <code>}</code> は2重括弧に読み換えてください。</p>
+<p><strong>使い方の例</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{indexmenu&gt;.|js navbar noscroll notoc tsort nsort skipfile=/sidebar/ skipns=/^(wiki|playground)$/ }
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><code>indexmenu&gt;.</code><br />
+  全て開いた状態にします。<code>.#1</code> にすると現在のレベルのみを開いた状態になります。</li>
+<li><code>js</code><br />
+  Windowsエクスプローラ風にして、右クリックをできるようにします。</li>
+<li><code>navbar</code><br />
+  現在の名前空間を開いた状態にします。</li>
+<li><code>noscroll</code><br />
+  表示幅に収まらなかった場合にスクロールバーを表示しないようにします。<strong>js</strong>オプション指定時のみ有効です。</li>
+<li><code>notoc</code><br />
+  TOCを無効にします。<strong>js</strong>オプション指定時のみ有効です。</li>
+<li><code>tsort</code><br />
+  ページのタイトルでソートします。</li>
+<li><code>nsort</code><br />
+  名前空間もページソートオプションと同様にソートします。</li>
+<li><code>msort</code><br />
+  ページごとに埋め込まれたメタデータタグに基づいてソートします。メタデータタグとは <code>indexmenu_n&gt;10</code> のような文字列のことです。</li>
+</ul>
+<p><strong>メタデータタグについて</strong></p>
+<p><code>indexmenu_n&gt;10</code> の「10」という部分を任意の数値にすることができ、その数値の昇順によってページが並び替えられます。メタデータタグはwikiが解釈できる範囲内であればページの何処にあってもいいです。</p>
+<p><strong>注意</strong></p>
+<p>2020年6月のバージョンアップ後、「機能フラグ」の「defer_js」をOffにしないと、うまくJavaScriptが表示できません。</p>
+<h2 id="move">Move</h2>
+<p><a href="https://www.dokuwiki.org/plugin:move">plugin:move</a></p>
+<p>ページ移動・ページ名変更・名前空間変更</p>
+<h2 id="pagelist">PageList</h2>
+<p><a href="https://www.dokuwiki.org/ja%3Aplugin%3Apagelist">ja:plugin:pagelist</a></p>
+<p>きれいにフォーマットした表として、wikiページの一覧を表示します。</p>
+<p>Changesプラグインと一緒に使用しますが、単体での用途が今のところ不明。。</p>
+<h2 id="plantumlparser">plantumlparser</h2>
+<p><a href="https://www.dokuwiki.org/plugin:plantumlparser">plugin:plantumlparser</a></p>
+<p>文書内にUML図を作成できます。</p>
+<p><strong>例</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&lt;uml&gt;
+actor Actor
+card Card
+cloud Cloud
+component Component
+database Database
+file File
+folder Folder
+frame Frame
+interface Interface
+node Node
+package Package
+storage Strage
+node &quot;Rock64 SMC&quot; {
+  frame &quot;ROS&quot; {
+    component &quot;Controle node&quot;
+  }
+}
+&lt;/uml&gt;
+</code></pre></div>
+</td></tr></table>
+<h2 id="syntaxhighlighter4">SyntaxHighlighter4</h2>
+<p><a href="https://www.dokuwiki.org/plugin:syntaxhighlighter4">plugin:syntaxhighlighter4</a></p>
+<p>シンタックスハイライト</p>
+<p><strong>例</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&lt;sxh c title:sample.c&gt;
+#include &lt;stdio.h&gt;
+int main()
+{
+    int test = 0;
+    printf(&quot;Hello,world! %d\n&quot;, test);
+    return 0;
+}
+&lt;/sxh&gt;
+</code></pre></div>
+</td></tr></table>
+<p><strong>カラーテーマを変更する</strong></p>
+<p>「管理」-&gt;「サイト設定」から好きなカラーテーマを選択する。</p>
+<p>各テーマのスタイルシートは、<code>config/dokuwiki/lib/plugins/syntaxhighlighter4/dist</code> にある。</p>
+<h2 id="toctweak">TocTweak</h2>
+<p><a href="https://www.dokuwiki.org/plugin:toctweak">plugin:toctweak</a></p>
+<p>目次(TOC:Table of Contents)を作成します。</p>
+<ul>
+<li>特定のページだけ目次を非表示にします。</li>
+<li>デフォルトで非表示にします。</li>
+<li>Wikipeidaのように、ページのインラインに目次を表示します。</li>
+</ul>
+<p>※以下の例は、Jekyllの変換に失敗するため、<code>{</code> と <code>}</code> のような単一括弧の記載としています。実際に使う場合は、<code>{</code> と <code>}</code> は2重括弧に読み換えてください。</p>
+<p><strong>使い方の例</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{INLINETOC}
+</code></pre></div>
+</td></tr></table>
+<p><strong>スタイルを変更する</strong></p>
+<p>スタイルシートは <code>lib/plugins/toctweak</code> にあり、<code>all.css</code> を修正する。</p>
+<p>以下のような変更を実施してみました。</p>
+<ul>
+<li>本文とのマージンを広げます。</li>
+<li>目次のデザイン(h3)を変更します。</li>
+<li>囲い線をなくします。</li>
+<li>リストをできるだけ左に寄せます。</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">39</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">40</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">41</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">42</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888888">/*------------------------------------*</span>
+<span style="color: #888888">   INLINETOC</span>
+<span style="color: #888888"> *------------------------------------*/</span>
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">toc_inline</span> {
+    <span style="color: #008800; font-weight: bold">margin-top</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #0000DD; font-weight: bold">30</span><span style="color: #333399; font-weight: bold">px</span>;   <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：5px</span>
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">border-color</span>: __border__;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：有効</span>
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">border-style</span>: <span style="color: #008800; font-weight: bold">solid</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：有効</span>
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">border-width</span>: <span style="color: #008800; font-weight: bold">thin</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：有効</span>
+    <span style="color: #008800; font-weight: bold">padding-top</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">border-radius</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：有効</span>
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">background-color</span>: __background_alt__;
+  <span style="color: #FF0000; background-color: #FFAAAA">h3</span> <span style="color: #FF0000; background-color: #FFAAAA">{</span>
+    <span style="color: #008800; font-weight: bold">padding-left</span>: <span style="color: #008800; font-weight: bold">none</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：2em</span>
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：.875em</span>
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">bold</span>;
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #008800; font-weight: bold">none</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：なし（下線あり）</span>
+  }
+  <span style="color: #333333">&gt;</span> <span style="color: #007700">div</span> {
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">.9375</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #008800; font-weight: bold">padding-left</span>: <span style="color: #6600EE; font-weight: bold">1.6</span><span style="color: #333399; font-weight: bold">em</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：有効</span>
+    <span style="color: #008800; font-weight: bold">padding-right</span>: <span style="color: #6600EE; font-weight: bold">1.6</span><span style="color: #333399; font-weight: bold">em</span>;
+  }
+  <span style="color: #007700">ul</span> {
+      <span style="color: #008800; font-weight: bold">list-style-type</span>: <span style="color: #008800; font-weight: bold">square</span>;
+      <span style="color: #008800; font-weight: bold">line-height</span>: <span style="color: #6600EE; font-weight: bold">1.5</span><span style="color: #333399; font-weight: bold">em</span>;
+      <span style="color: #FF0000; background-color: #FFAAAA">li.clear</span> <span style="color: #FF0000; background-color: #FFAAAA">{</span>
+          <span style="color: #008800; font-weight: bold">list-style-type</span>: <span style="color: #008800; font-weight: bold">none</span>;
+      }
+  <span style="color: #FF0000; background-color: #FFAAAA">}</span>
+<span style="color: #FF0000; background-color: #FFAAAA">}</span>
+<span style="color: #333333">[</span><span style="color: #007700">dir</span><span style="color: #333333">=</span><span style="color: #007700">rtl</span><span style="color: #333333">]</span> <span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">toc_inline</span> {
+  <span style="color: #FF0000; background-color: #FFAAAA">h3</span> <span style="color: #FF0000; background-color: #FFAAAA">{</span>
+    <span style="color: #008800; font-weight: bold">padding-right</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：2em</span>
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：.875em</span>
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">bold</span>;
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #008800; font-weight: bold">none</span>;    <span style="color: #FF0000; background-color: #FFAAAA">//</span> <span style="color: #FF0000; background-color: #FFAAAA">変更前：なし（下線あり）</span>
+  }
+  <span style="color: #007700">ul</span> {
+      <span style="color: #008800; font-weight: bold">list-style-type</span>: <span style="color: #008800; font-weight: bold">square</span>;
+      <span style="color: #008800; font-weight: bold">line-height</span>: <span style="color: #6600EE; font-weight: bold">1.5</span><span style="color: #333399; font-weight: bold">em</span>;
+  }
+<span style="color: #FF0000; background-color: #FFAAAA">}</span>
+</code></pre></div>
+</td></tr></table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

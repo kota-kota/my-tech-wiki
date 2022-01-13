@@ -14,7 +14,7 @@
     
     
       
-        <title>ファイアウォールを設定する - My Technical Wiki</title>
+        <title>Sambaで共有フォルダを設定する - My Technical Wiki</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#samba" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ファイアウォールを設定する
+              Sambaで共有フォルダを設定する
             
           </span>
         </div>
@@ -583,120 +583,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ファイアウォールを設定する
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../21_firewall_settings/" class="md-nav__link">
         ファイアウォールを設定する
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
-  </a>
-  
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -734,11 +625,87 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../24-samba_settings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sambaで共有フォルダを設定する
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Sambaで共有フォルダを設定する
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samba_1" class="md-nav__link">
+    Sambaのユーザ情報に追加
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    設定ファイル
+  </a>
+  
+    <nav class="md-nav" aria-label="設定ファイル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    例：フルアクセス設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    例：ユーザ限定アクセス設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1074,70 +1041,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
+  <a href="#_1" class="md-nav__link">
+    インストール
   </a>
   
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samba_1" class="md-nav__link">
+    Sambaのユーザ情報に追加
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
+    設定ファイル
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
+    <nav class="md-nav" aria-label="設定ファイル">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
+  <a href="#_3" class="md-nav__link">
+    例：フルアクセス設定
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
+  <a href="#_4" class="md-nav__link">
+    例：ユーザ限定アクセス設定
   </a>
   
 </li>
@@ -1159,158 +1093,82 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/21_firewall_settings.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/24-samba_settings.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="_1">ファイアウォールを設定する</h1>
-<h2 id="ufw">簡易ファイアウォール(ufw)</h2>
-<p>パケットフィルタリングできるコマンド <code>iptables</code> を使用すると細かい設定ができるが難しいため、簡易的なファイアウォールを提供する <code>ufw</code> コマンドを使用します。</p>
-<h3 id="_2">ファイアウォールを有効にする</h3>
-<p>ファイアウォールの状態を確認します。
-<code>Status: inactive</code> が無効で、<code>Status: active</code> が有効になります。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw status
-</code></pre></div>
-</td></tr></table>
-<p>ファイアウォールを有効にします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw <span style="color: #007020">enable</span>
-Firewall is active and enabled on system startup
-</code></pre></div>
-</td></tr></table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>Command may disrupt existing ssh connections. Proceed with operation (y|n)?</code>
-と聞かれます。SSH接続が出来なくなるけど大丈夫か？という質問なので、<code>y</code> と入力して問題ありません。</p>
+                <h1 id="samba">Sambaで共有フォルダを設定する</h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>修正必要</p>
 </div>
-<p>ファイアウォールが利用可能なアプリケーションを調べます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw app list
+<p><code>samba</code> について記載します。</p>
+<h2 id="_1">インストール</h2>
+<p>Ubuntuであれば <code>apt</code> コマンドでインストールできます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt update
+$ sudo apt install samba
 </code></pre></div>
 </td></tr></table>
-<p>インストールしているアプリによりますが、例えば以下のような結果になります。</p>
+<h2 id="samba_1">Sambaのユーザ情報に追加</h2>
+<p>Sambaのユーザ情報に、Linuxのユーザを追加します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo smbpasswd -a &lt;user_name&gt;
+New SMB password: <span style="color: #333333">[</span>パスワード入力<span style="color: #333333">]</span>
+Retype new SMB password: <span style="color: #333333">[</span>パスワード入力<span style="color: #333333">]</span>
+Added user &lt;user_name&gt;.
+</code></pre></div>
+</td></tr></table>
+<h2 id="_2">設定ファイル</h2>
+<p>設定ファイルは、<code>/etc/samba/smb.conf</code> にあります。</p>
+<h3 id="_3">例：フルアクセス設定</h3>
+<p>誰でもアクセスできるフォルダ <code>/var/tmp</code> を設定します。
+<code>/var/tmp</code> は初めから作成されています。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[temp]
+   comment = Temporary Data Space
+   path = /var/tmp
+   force user = {USER}
+   force group = {GROUP}
+   create mode = 0644
+   directory mode = 0755
+   writable = yes
+   browsable = yes
+   guest ok = yes
+   guest only = yes
+</code></pre></div>
+</td></tr></table>
+<h3 id="_4">例：ユーザ限定アクセス設定</h3>
+<p>ユーザを限定してアクセスできるフォルダ <code>/var/share</code> を設定します。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
-  Samba
-</code></pre></div>
-</td></tr></table>
-<h3 id="apache">Apacheのアクセスを許可する</h3>
-<p>Apacheはhttpのみ（ポート80）、Apache Fullはhttpとhttps（ポート443）、Apache Secureはhttpsのみを表しています。
-いずれSSL化したいため、Fullで許可しておきます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow <span style="background-color: #fff0f0">&#39;Apache Full&#39;</span>
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-Apache Full (v6)           ALLOW       Anywhere (v6)
-</code></pre></div>
-</td></tr></table>
-<h4 id="ipv6">IPv6を無効にする</h4>
-<p>Apacheのアクセスを許可すると、IPv4だけでなくIPv6もアクセス許可されます。
-IPv6は無効にしたいため、<code>/etc/default/ufw</code> を以下のように変更します。</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/default/ufw</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code># Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
-# accepted). You will need to &#39;disable&#39; and then &#39;enable&#39; the firewall for
-# the changes to take affect.
-#IPV6=yes
-IPV6=no
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-</code></pre></div>
-</td></tr></table>
-<h3 id="openssh">OpenSSHのアクセスを許可する</h3>
-<p>OpenSSHは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。
-<code>ufw limit OpenSSH</code> でlimitをかける方法もありますが、外部アクセスが必要になったときに考えることにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       192.168.0.0/24
-</code></pre></div>
-</td></tr></table>
-<h4 id="ssh">SSHポート番号を変更する</h4>
-<p>SSHポート番号をデフォルト22から2022へ変更します。</p>
-<p><code>/etc/ssh/sshd_config</code> のバックアップを取り、以下を追記します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>#Port 22
-Port 2022
-</code></pre></div>
-</td></tr></table>
-<p>sshを再起動。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo systemctl restart sshd
-</code></pre></div>
-</td></tr></table>
-<h4 id="2022">ファイアウォールで新ポート2022を公開する</h4>
-<p>まず、プロファイルを作成します。
-<code>/etc/ufw/applications.d/myssh</code> を新規作成して、以下のように記述します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[myssh]
-title=My SSH
-description=This is used by My SSH
-ports=2022/tcp
-</code></pre></div>
-</td></tr></table>
-<p>ファイアウォールで新ポート2022を公開します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app myssh
-</code></pre></div>
-</td></tr></table>
-<p>旧ポート22(OpenSSH)は削除します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw delete allow OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo ufw status
-Status: active
-
-To                         Action      From
---                         ------      ----
-myssh                      ALLOW       <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24
-</code></pre></div>
-</td></tr></table>
-<h3 id="samba">Sambaのアクセスを許可する</h3>
-<p>Sambaは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app Samba
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Samba                      ALLOW       192.168.0.0/24
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[share]
+   comment = Share Data Space
+   path = /var/share
+   force user = {USER}
+   force group = {GROUP}
+   create mode = 0644
+   directory mode = 0755
+   writable = yes
+   browsable = yes
 </code></pre></div>
 </td></tr></table>
                 

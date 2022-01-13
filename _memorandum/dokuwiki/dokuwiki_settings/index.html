@@ -1,0 +1,1888 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Dokuwikiの各種設定をまとめる - My Technical Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dokuwiki" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Technical Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dokuwikiの各種設定をまとめる
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Technical Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        トップページ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          開発環境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="開発環境" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          開発環境
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/docker/" class="md-nav__link">
+        Dockerをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/git/" class="md-nav__link">
+        Gitの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/linux_shell/" class="md-nav__link">
+        Linuxシェルの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/postgresql/" class="md-nav__link">
+        PostgreSQLをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/ubuntu_other_settings/" class="md-nav__link">
+        Ubuntuの様々な設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/vim/" class="md-nav__link">
+        Vimの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/vscode/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevelopmentEnvironment/wsl2_ubuntu2004/" class="md-nav__link">
+        Windows 10 に WSL2 + Ubuntu 20.04 LTS を導入する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/00_mkdocs_install/" class="md-nav__link">
+        Mkdocsをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/01_mkdocs_settings/" class="md-nav__link">
+        Mkdocsをカスタマイズする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/99_mkdocs_plugin_test/" class="md-nav__link">
+        Mkdocsプラグインの記述テスト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="プログラミング" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/docker_how_to_use/" class="md-nav__link">
+        Dockerを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/git_how_to_use/" class="md-nav__link">
+        Gitコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/linux_commands/" class="md-nav__link">
+        Linuxコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/linux_shortcuts/" class="md-nav__link">
+        Linuxショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/postgresql_how_to_use/" class="md-nav__link">
+        PostgreSQLを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/vscode_shortcuts/" class="md-nav__link">
+        VSCodeショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          サーバ構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="サーバ構築" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          サーバ構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
+        Rock64にUbuntu18.04をインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
+        外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache_install/" class="md-nav__link">
+        Apacheをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doxygen_settings/" class="md-nav__link">
+        Doxygenの設定ファイルまとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_authentication/" class="md-nav__link">
+        GitHubの認証に個人アクセストークンとSSHキーを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../githubpages_minimal_mistakes/" class="md-nav__link">
+        GitHub Pages + Minimal Mistakes を導入する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php_install/" class="md-nav__link">
+        PHPをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study_about_float/" class="md-nav__link">
+        勉強：浮動小数点について
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualbox_settings/" class="md-nav__link">
+        VirtualBoxの設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          Dokuwiki
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dokuwiki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          Dokuwiki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dokuwiki_install/" class="md-nav__link">
+        Dokuwikiをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dokuwiki_plugins/" class="md-nav__link">
+        Dokuwikiに導入したプラグイン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dokuwikiの各種設定をまとめる
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dokuwikiの各種設定をまとめる
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    サイトの設定
+  </a>
+  
+    <nav class="md-nav" aria-label="サイトの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dokuwiki_1" class="md-nav__link">
+    DokuWiki
+  </a>
+  
+    <nav class="md-nav" aria-label="DokuWiki">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    認証
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    リンク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    機能フラグ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    プラグイン
+  </a>
+  
+    <nav class="md-nav" aria-label="プラグイン">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexmenu" class="md-nav__link">
+    IndexMenu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    デザインの設定
+  </a>
+  
+    <nav class="md-nav" aria-label="デザインの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arctic" class="md-nav__link">
+    arcticテンプレート
+  </a>
+  
+    <nav class="md-nav" aria-label="arcticテンプレート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    スタイルのカスタマイズ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokuwiki_2" class="md-nav__link">
+    DokuWiki標準テンプレート
+  </a>
+  
+    <nav class="md-nav" aria-label="DokuWiki標準テンプレート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    テンプレートのスタイル設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    スタイルのカスタマイズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    サイドバーを付ける
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    その他の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="その他の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    デフォルトページを削除する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" data-md-state="indeterminate" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Nextcloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nextcloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Nextcloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_install/" class="md-nav__link">
+        NextCloudをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+        NextCloudで外部ストレージを利用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+        NextCloudのDockerイメージでsmbclientを使用する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    サイトの設定
+  </a>
+  
+    <nav class="md-nav" aria-label="サイトの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dokuwiki_1" class="md-nav__link">
+    DokuWiki
+  </a>
+  
+    <nav class="md-nav" aria-label="DokuWiki">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    認証
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    リンク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    機能フラグ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    プラグイン
+  </a>
+  
+    <nav class="md-nav" aria-label="プラグイン">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexmenu" class="md-nav__link">
+    IndexMenu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    デザインの設定
+  </a>
+  
+    <nav class="md-nav" aria-label="デザインの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arctic" class="md-nav__link">
+    arcticテンプレート
+  </a>
+  
+    <nav class="md-nav" aria-label="arcticテンプレート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    スタイルのカスタマイズ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokuwiki_2" class="md-nav__link">
+    DokuWiki標準テンプレート
+  </a>
+  
+    <nav class="md-nav" aria-label="DokuWiki標準テンプレート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    テンプレートのスタイル設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    スタイルのカスタマイズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    サイドバーを付ける
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    その他の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="その他の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    デフォルトページを削除する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/_memorandum/dokuwiki/dokuwiki_settings.md" title="編集" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="dokuwiki">Dokuwikiの各種設定をまとめる</h1>
+<p>DokuWikiにおける各種設定項目についてまとめておきます。</p>
+<h2 id="_1">サイトの設定</h2>
+<p>DokuWikiの「管理」-&gt;「サイト設定」でカスタマイズした内容を記載します。</p>
+<p>ここで変更した内容は、<code>config/dokuwiki/conf/local.php</code> に保存されます。
+このファイルを編集することで変更することもできます。</p>
+<h3 id="dokuwiki_1">DokuWiki</h3>
+<h4 id="_2">基本</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wikiタイトル（あなたのWikiの名前）</td>
+<td>My Wiki</td>
+<td>悩む。。</td>
+</tr>
+<tr>
+<td>テンプレート（Wikiのデザイン）</td>
+<td>arctic</td>
+<td>arcticテンプレートをインストールして設定する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_3">表示</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>トレース（パンくず）表示数（0で無効化します）</td>
+<td>0</td>
+<td>トレースいらない。現在位置だけでいい</td>
+</tr>
+<tr>
+<td>現在位置を表示</td>
+<td>チェック</td>
+<td>現在位置は欲しい</td>
+</tr>
+<tr>
+<td>最終編集者の情報として表示する内容</td>
+<td>ユーザーのフルネーム</td>
+<td>ログイン名は極力出さないように</td>
+</tr>
+<tr>
+<td>目次のトップレベル見出し</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>目次を生成する最小見出し数</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>目次に表示する最大レベルの見出し</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>部分編集を有効にする最大レベルの見出し</td>
+<td>0</td>
+<td>ページのセクション毎の編集釦を消す</td>
+</tr>
+<tr>
+<td>最初の見出しをページ名とする</td>
+<td>常に使用する</td>
+<td>現在位置やトレースには、見出しが表示されているほうが分かりやすい</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_4">認証</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DokuWiki の動作を無効にする</td>
+<td>ユーザ登録</td>
+<td>他にも要らないものあると思う</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">編集</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML埋め込みを許可する</td>
+<td>チェック</td>
+<td></td>
+</tr>
+<tr>
+<td>PHP埋め込みを許可する</td>
+<td>チェック</td>
+<td></td>
+</tr>
+<tr>
+<td>キャッシュ保持時間（秒）</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">リンク</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外部リンクのtarget属性</td>
+<td>_blank</td>
+<td></td>
+</tr>
+<tr>
+<td>メディアリンクのtarget属性</td>
+<td>_blank</td>
+<td></td>
+</tr>
+<tr>
+<td>Windowsリンクのtarget属性</td>
+<td>_blank</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">機能フラグ</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ページのHTMLが解析されるまでJavascriptの実行を延期する</td>
+<td>チェックを外す</td>
+<td>IndexMenuプラグイン動作のため</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">プラグイン</h3>
+<h4 id="indexmenu">IndexMenu</h4>
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>項目</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理者にはページの注釈の先頭に indexmenu ソート番号を表示する。</td>
+<td>チェック</td>
+<td>ソート番号が表示されるが管理者でログインしているときだけなので許容</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">デザインの設定</h2>
+<p>DokuWikiのデザイン設定を記載します。</p>
+<h3 id="arctic">arcticテンプレート</h3>
+<h4 id="_10">スタイルのカスタマイズ</h4>
+<p><code>lib/tpl/arctic</code> にスタイルシート群があります。
+ここに自分専用のスタイルシート <code>my_style.css</code> を作成します。
+そして、これを反映させるために <code>style.ini</code> に以下のように追記する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #0000CC">arctic_layout.css</span> <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">arctic_design.css</span> <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">arctic_media.css</span>  <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">arctic_rtl.css</span>    <span style="color: #333333">=</span> <span style="background-color: #fff0f0">rtl</span>
+<span style="color: #0000CC">arctic_print.css</span>  <span style="color: #333333">=</span> <span style="background-color: #fff0f0">print</span>
+
+<span style="color: #0000CC">my_style.css</span>      <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen   # 追加</span>
+</code></pre></div>
+</td></tr></table>
+<p>あとは <code>my_style.css</code> を好きなように修正すればいいです。
+以下は少し手を加えてみた一例です。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">39</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">40</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">41</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">42</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">44</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">45</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">46</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">47</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888888">/* my headline setup */</span>
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">h1</span> {
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #0000DD; font-weight: bold">200</span><span style="color: #333399; font-weight: bold">%</span>;
+        <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding-bottom</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;
+}
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">h2</span> {
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #0000DD; font-weight: bold">180</span><span style="color: #333399; font-weight: bold">%</span>;
+        <span style="color: #008800; font-weight: bold">margin-top</span>: <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333399; font-weight: bold">em</span>;
+        <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding-top</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-bottom</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-left</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #008800; font-weight: bold">solid</span> __border__;
+}
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">h3</span> {
+        <span style="color: #008800; font-weight: bold">margin-top</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;
+        <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding-top</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-bottom</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-left</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #008800; font-weight: bold">solid</span> __border__;
+}
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">h4</span> {
+        <span style="color: #008800; font-weight: bold">margin-top</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;
+        <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding-top</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-bottom</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">padding-left</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #008800; font-weight: bold">double</span> __border__;
+}
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">h5</span> {
+        <span style="color: #008800; font-weight: bold">margin-top</span>: <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">em</span>;
+        <span style="color: #008800; font-weight: bold">margin-bottom</span>: <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+}
+
+<span style="color: #888888">/* my toc */</span>
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> #<span style="color: #0e84b5; font-weight: bold">dw__toc</span> {
+    <span style="color: #008800; font-weight: bold">width</span>: <span style="color: #0000DD; font-weight: bold">350</span><span style="color: #333399; font-weight: bold">px</span>;
+}
+
+<span style="color: #888888">/* my code */</span>
+<span style="color: #007700">div</span>.<span style="color: #BB0066; font-weight: bold">dokuwiki</span> <span style="color: #007700">code</span> {
+    <span style="color: #008800; font-weight: bold">background-color</span>: __lightgray__;
+    <span style="color: #008800; font-weight: bold">padding</span>: <span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">border-radius</span>: <span style="color: #6600EE; font-weight: bold">0.3</span><span style="color: #333399; font-weight: bold">em</span>;
+}
+</code></pre></div>
+</td></tr></table>
+<h3 id="dokuwiki_2">DokuWiki標準テンプレート</h3>
+<h4 id="_11">テンプレートのスタイル設定</h4>
+<p>「管理」-&gt;「テンプレートのスタイル設定」でカスタマイズした内容を記載します。</p>
+<table>
+<thead>
+<tr>
+<th>設定項目</th>
+<th>デフォルト</th>
+<th>変更後</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>サイトの全体</td>
+<td>75em</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p>ここでの変更は、<code>conf/tpl/dokuwiki/style.ini</code> ファイルに保存されます。</p>
+<h4 id="_12">スタイルのカスタマイズ</h4>
+<p>参考にしたサイト<br />
+<a href="https://dokuwiki.oreda.net/template/dokuwiki.html">https://dokuwiki.oreda.net/template/dokuwiki.html</a></p>
+<p><code>lib/tpl/dokuwiki</code> にスタイルシート群があります。
+ここに自分専用のスタイルシート <code>css/my_style.css</code> を作成します。
+そして、これを反映させるために <code>style.ini</code> に以下のように追記する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #0000CC">（略）</span>
+<span style="color: #0000CC">css/_edit.css</span>             <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/_modal.css</span>            <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/_forms.css</span>            <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/_admin.css</span>            <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/structure.less</span>        <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/design.less</span>           <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/pagetools.less</span>        <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/content.less</span>          <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen</span>
+<span style="color: #0000CC">css/my_style.css</span>          <span style="color: #333333">=</span> <span style="background-color: #fff0f0">screen  # ここ</span>
+</code></pre></div>
+</td></tr></table>
+<p>あとは <code>css/my_style.css</code> を好きなように修正すればいいです。
+以下は少し手を加えてみた一例です。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">39</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">40</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">41</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">42</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">44</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">45</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">46</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">47</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">48</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">49</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">50</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">51</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">52</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">53</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">54</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">55</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">56</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">body</span> {
+    <span style="color: #008800; font-weight: bold">min-width</span>: <span style="color: #0000DD; font-weight: bold">1150</span><span style="color: #333399; font-weight: bold">px</span>;
+}
+
+<span style="color: #007700">h1</span> {
+    <span style="color: #008800; font-weight: bold">color</span>: <span style="color: #005588; font-weight: bold">#666</span>;
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">1.8</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">0.444</span><span style="color: #333399; font-weight: bold">em</span>;
+}
+<span style="color: #007700">h2</span> {
+    <span style="color: #008800; font-weight: bold">color</span>: <span style="color: #008800; font-weight: bold">white</span>;
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">1.4</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">0.5</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">normal</span>;
+    <span style="color: #008800; font-weight: bold">background-color</span>: <span style="color: #005588; font-weight: bold">#557697</span>;
+    <span style="color: #008800; font-weight: bold">padding</span>: <span style="color: #0000DD; font-weight: bold">14</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">12</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span>;
+}
+<span style="color: #007700">h3</span> {
+    <span style="color: #008800; font-weight: bold">color</span>: <span style="color: #005588; font-weight: bold">#666</span>;
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">1.2</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">0.888</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">normal</span>;
+    <span style="color: #008800; font-weight: bold">padding</span>: <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">background-color</span>: <span style="color: #008800; font-weight: bold">white</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #008800; font-weight: bold">solid</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #005588; font-weight: bold">#557697</span>;
+    <span style="color: #008800; font-weight: bold">border-top</span>: <span style="color: #008800; font-weight: bold">none</span>;
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #008800; font-weight: bold">solid</span> <span style="color: #005588; font-weight: bold">#557697</span>;
+    <span style="color: #008800; font-weight: bold">border-right</span>: <span style="color: #008800; font-weight: bold">none</span>;
+}
+<span style="color: #007700">h4</span> {
+    <span style="color: #008800; font-weight: bold">color</span>: <span style="color: #005588; font-weight: bold">#666</span>;
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">1.0</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">1.0</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding</span>: <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">normal</span>;
+    <span style="color: #008800; font-weight: bold">background-color</span>: <span style="color: #008800; font-weight: bold">white</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #008800; font-weight: bold">solid</span> <span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #005588; font-weight: bold">#557697</span>;
+    <span style="color: #008800; font-weight: bold">border-top</span>: <span style="color: #008800; font-weight: bold">none</span>;
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #008800; font-weight: bold">none</span>;
+    <span style="color: #008800; font-weight: bold">border-right</span>: <span style="color: #008800; font-weight: bold">none</span>;
+}
+<span style="color: #007700">h5</span> {
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">.8</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">1.1428</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">padding</span>: <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333399; font-weight: bold">px</span>;
+    <span style="color: #888888">/*border-bottom: 3px solid #557697;*/</span>
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #008800; font-weight: bold">none</span>;
+    <span style="color: #008800; font-weight: bold">border-left</span>: <span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #008800; font-weight: bold">solid</span> <span style="color: #005588; font-weight: bold">#557697</span>;
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">normal</span>;
+}
+<span style="color: #007700">h6</span> {
+    <span style="color: #008800; font-weight: bold">font-size</span>: <span style="color: #6600EE; font-weight: bold">.75</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">margin</span>: <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #6600EE; font-weight: bold">1.333</span><span style="color: #333399; font-weight: bold">em</span>;
+    <span style="color: #008800; font-weight: bold">border-bottom</span>: <span style="color: #008800; font-weight: bold">dotted</span> <span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333399; font-weight: bold">px</span> <span style="color: #005588; font-weight: bold">#cacaca</span>;
+    <span style="color: #008800; font-weight: bold">font-weight</span>: <span style="color: #008800; font-weight: bold">normal</span>;
+}
+</code></pre></div>
+</td></tr></table>
+<h4 id="_13">サイドバーを付ける</h4>
+<p><code>sidebar</code> という名前のページを作ると、そのページがサイドバーになります。</p>
+<h2 id="_14">その他の設定</h2>
+<h3 id="_15">デフォルトページを削除する</h3>
+<p>DokuWikiには、以下の4つのデフォルトページが存在します。</p>
+<ul>
+<li>wiki:welcome（ウェルカムページ）</li>
+<li>wiki:dokuwiki（DokuWikiの説明ページ）</li>
+<li>wiki:syntax（整形記法・構文一覧）</li>
+<li>playground:playground（練習用ページ）</li>
+</ul>
+<p>「<strong>wiki:welcome</strong>」と「<strong>wiki:dokuwiki</strong>」については、不要なので削除します。</p>
+<p>「<strong>wiki:syntax</strong>」と「<strong>playground:playground</strong>」については削除しても問題ありませんが、ページ編集画面にリンク箇所があるのでページを削除した場合リンク切れとなります。このリンク切れを解消したい場合は、<code>inc/lang/ja/edit.txt</code> を以下のように修正します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>編集して`保存`をクリックしてください。Wikiの構文については [[doku&gt;ja:wiki:syntax]] を参考にしてください
+
+当然のことですが、この文書の質を **向上** させる場合のみ編集してください。もし編集方法や構文を練習したいのであれば [[doku&gt;playground:playground]] を利用してください。
+</code></pre></div>
+</td></tr></table>
+<p>InterWikiリンクでリンク先をDokuWiki公式サイトのページへと変更しています。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

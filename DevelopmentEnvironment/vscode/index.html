@@ -1,0 +1,2059 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Visual Studio Code - My Technical Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visual-studio-code" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="My Technical Wiki" class="md-header__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Technical Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visual Studio Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Technical Wiki" class="md-nav__button md-logo" aria-label="My Technical Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Technical Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kota-kota/my-tech-wiki/" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kota-kota/my-tech-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        トップページ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          開発環境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="開発環境" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          開発環境
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Dockerをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        Gitの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_shell/" class="md-nav__link">
+        Linuxシェルの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQLをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu_other_settings/" class="md-nav__link">
+        Ubuntuの様々な設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/" class="md-nav__link">
+        Vimの環境設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Visual Studio Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Visual Studio Code
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拡張機能ジェネレータ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拡張機能：本体
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：本体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#japanese-language-pack-for-visual-studio-code" class="md-nav__link">
+    Japanese Language Pack for Visual Studio Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-in-editor" class="md-nav__link">
+    Open in Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-autocomplete" class="md-nav__link">
+    Path Autocomplete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-development" class="md-nav__link">
+    Remote Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-json-objects" class="md-nav__link">
+    Sort JSON objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode-icons" class="md-nav__link">
+    vscode-icons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsnotes" class="md-nav__link">
+    VSNotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    拡張機能：Git
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gitlens" class="md-nav__link">
+    GitLens
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    拡張機能：Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown-all-in-one" class="md-nav__link">
+    Markdown All in One
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-preview-github-styling" class="md-nav__link">
+    Markdown Preview Github Styling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdownlint" class="md-nav__link">
+    markdownlint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste-image" class="md-nav__link">
+    Paste Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texttables" class="md-nav__link">
+    TextTables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantuml" class="md-nav__link">
+    拡張機能：PlantUML
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：PlantUML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plantuml_1" class="md-nav__link">
+    PlantUML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cc" class="md-nav__link">
+    拡張機能：C/C++
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：C/C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cc-for-visual-studio-code" class="md-nav__link">
+    C/C++ for Visual Studio Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    拡張機能：Python
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-extension-for-visual-studio-code" class="md-nav__link">
+    Python extension for Visual Studio Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    拡張機能：JavaScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript" class="md-nav__link">
+    拡張機能：TypeScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    拡張機能：HTML
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-server" class="md-nav__link">
+    Live Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    拡張機能：Rust
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Rust">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust_1" class="md-nav__link">
+    Rust
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    拡張機能：Go
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go_1" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsl2_ubuntu2004/" class="md-nav__link">
+        Windows 10 に WSL2 + Ubuntu 20.04 LTS を導入する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/00_mkdocs_install/" class="md-nav__link">
+        Mkdocsをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/01_mkdocs_settings/" class="md-nav__link">
+        Mkdocsをカスタマイズする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/99_mkdocs_plugin_test/" class="md-nav__link">
+        Mkdocsプラグインの記述テスト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="プログラミング" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/docker_how_to_use/" class="md-nav__link">
+        Dockerを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/git_how_to_use/" class="md-nav__link">
+        Gitコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/linux_commands/" class="md-nav__link">
+        Linuxコマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/linux_shortcuts/" class="md-nav__link">
+        Linuxショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/postgresql_how_to_use/" class="md-nav__link">
+        PostgreSQLを使ってみた
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/vscode_shortcuts/" class="md-nav__link">
+        VSCodeショートカットキー
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          サーバ構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="サーバ構築" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          サーバ構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
+        Rock64にUbuntu18.04をインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
+        外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/apache_install/" class="md-nav__link">
+        Apacheをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/doxygen_settings/" class="md-nav__link">
+        Doxygenの設定ファイルまとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/github_authentication/" class="md-nav__link">
+        GitHubの認証に個人アクセストークンとSSHキーを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/githubpages_minimal_mistakes/" class="md-nav__link">
+        GitHub Pages + Minimal Mistakes を導入する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/php_install/" class="md-nav__link">
+        PHPをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/study_about_float/" class="md-nav__link">
+        勉強：浮動小数点について
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/virtualbox_settings/" class="md-nav__link">
+        VirtualBoxの設定まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" data-md-state="indeterminate" type="checkbox" id="__nav_6_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          Dokuwiki
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dokuwiki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          Dokuwiki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_install/" class="md-nav__link">
+        Dokuwikiをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_plugins/" class="md-nav__link">
+        Dokuwikiに導入したプラグイン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/dokuwiki/dokuwiki_settings/" class="md-nav__link">
+        Dokuwikiの各種設定をまとめる
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" data-md-state="indeterminate" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Nextcloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nextcloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Nextcloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_install/" class="md-nav__link">
+        NextCloudをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+        NextCloudで外部ストレージを利用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_memorandum/nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+        NextCloudのDockerイメージでsmbclientを使用する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拡張機能ジェネレータ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拡張機能：本体
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：本体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#japanese-language-pack-for-visual-studio-code" class="md-nav__link">
+    Japanese Language Pack for Visual Studio Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-in-editor" class="md-nav__link">
+    Open in Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-autocomplete" class="md-nav__link">
+    Path Autocomplete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-development" class="md-nav__link">
+    Remote Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-json-objects" class="md-nav__link">
+    Sort JSON objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode-icons" class="md-nav__link">
+    vscode-icons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsnotes" class="md-nav__link">
+    VSNotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    拡張機能：Git
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gitlens" class="md-nav__link">
+    GitLens
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    拡張機能：Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown-all-in-one" class="md-nav__link">
+    Markdown All in One
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-preview-github-styling" class="md-nav__link">
+    Markdown Preview Github Styling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdownlint" class="md-nav__link">
+    markdownlint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste-image" class="md-nav__link">
+    Paste Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texttables" class="md-nav__link">
+    TextTables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantuml" class="md-nav__link">
+    拡張機能：PlantUML
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：PlantUML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plantuml_1" class="md-nav__link">
+    PlantUML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cc" class="md-nav__link">
+    拡張機能：C/C++
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：C/C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cc-for-visual-studio-code" class="md-nav__link">
+    C/C++ for Visual Studio Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    拡張機能：Python
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-extension-for-visual-studio-code" class="md-nav__link">
+    Python extension for Visual Studio Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    拡張機能：JavaScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript" class="md-nav__link">
+    拡張機能：TypeScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    拡張機能：HTML
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-server" class="md-nav__link">
+    Live Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    拡張機能：Rust
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Rust">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust_1" class="md-nav__link">
+    Rust
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    拡張機能：Go
+  </a>
+  
+    <nav class="md-nav" aria-label="拡張機能：Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go_1" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/DevelopmentEnvironment/vscode.md" title="編集" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="visual-studio-code">Visual Studio Code</h1>
+<h2 id="_1">インストール</h2>
+<p>テキストエディタ。</p>
+<p>以下のサイトからインストーラをダウンロードしてインストールするだけです。</p>
+<p><a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p>
+<p>マルチプラットフォームで使えるエディタですが、Windowsで使います。
+Linux開発は、拡張機能 <code>Remote Development</code> を使ってリモートで開発します。</p>
+<p>環境変数 <code>PATH</code> を通して、コマンド <code>code</code> を使えるようにしておきます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; code -v
+<span style="color: #6600EE; font-weight: bold">1</span>.41.1
+26076a4de974ead31f97692a0d32f90d735645c0
+x64
+</code></pre></div>
+</td></tr></table>
+<h2 id="_2">拡張機能ジェネレータ</h2>
+<p><code>npm</code> コマンドを使って、拡張機能のジェネレータをインストールします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; npm install -g yo generator-code --save-dev
+</code></pre></div>
+</td></tr></table>
+<p>ジェネレータを使って、拡張機能のひな形を作成します。
+対話形式でプロジェクトを作成していきます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; npx yo code
+</code></pre></div>
+</td></tr></table>
+<p>パッケージ <code>.vsix</code> ファイルを作成するために、<code>vsce</code> をインストールします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; npm install -g vsce --save-dev
+</code></pre></div>
+</td></tr></table>
+<p>パッケージを作成します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; vsce package
+</code></pre></div>
+</td></tr></table>
+<p>パッケージを作成するためには最低限以下を実施する必要があります。</p>
+<ul>
+<li><code>package.json</code> に <code>publisher</code> と <code>repogitry</code> を追記します。</li>
+<li><code>README.md</code> を修正します。</li>
+</ul>
+<h2 id="_3">拡張機能：本体</h2>
+<h3 id="japanese-language-pack-for-visual-studio-code">Japanese Language Pack for Visual Studio Code</h3>
+<p>日本語化する。</p>
+<h3 id="open-in-editor">Open in Editor</h3>
+<p>VSCodeで開いているファイルを外部エディタで開く。</p>
+<ul>
+<li><strong>外部エディタを設定する</strong></li>
+</ul>
+<p><code>settings.json</code> に外部エディタの実行ファイルのパスを設定する。
+以下はサクラエディタを設定した例。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;alt-editor.binary&quot;</span>: <span style="background-color: #fff0f0">&quot;C:\\Program Files (x86)\\sakura\\sakura.exe&quot;</span>,
+    <span style="color: #007700">&quot;alt-editor.args&quot;</span>: <span style="background-color: #fff0f0">&quot;{filename} -X={column} -Y={line} -VY={line}&quot;</span>,
+}
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>外部エディタでファイルを開く</strong></li>
+</ul>
+<p><code>Alt+Shift+E</code> で、現在開いているファイルを外部エディタで開くことができる。</p>
+<h3 id="path-autocomplete">Path Autocomplete</h3>
+<p>パスの入力を支援してくれる。</p>
+<ul>
+<li><strong>拡張子を含める</strong></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;path-autocomplete.extensionOnImport&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>
+}
+</code></pre></div>
+</td></tr></table>
+<h3 id="remote-development">Remote Development</h3>
+<p>VSCodeからリモート環境へ接続し、開発することができる。</p>
+<ul>
+<li><strong>WSL環境へ接続する</strong></li>
+</ul>
+<p>コマンドパレットから <code>Remote-WSL: NewWindow</code> を選択し、WSLに接続します。</p>
+<p>SSHクライアント側（VSCode側）で、公開鍵を生成します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ ssh-keygen
+</code></pre></div>
+</td></tr></table>
+<p>SSHクライアント側（VSCode側）で、コンフィグファイル <code>${User}/.ssh/config</code> に接続先を以下のように記述します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Host host1
+    HostName 192.168.109.132    #接続先IPアドレス
+    Port 22                     #接続先ポート番号
+    User kyohei                 #ユーザ名
+    IdentityFile ~/.ssh/id_rsa  #公開鍵
+</code></pre></div>
+</td></tr></table>
+<p>SSHサーバ側（WSL側）で、SSHサーバパッケージをインストールしておく。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt-get install openssh-server
+</code></pre></div>
+</td></tr></table>
+<p>SSHサーバ側（WSL側）に、クライアント側の公開鍵を登録します。
+<code>authorized_keys</code> ファイルに公開鍵の内容をコピーします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ <span style="color: #007020">cd</span> ~/.ssh
+$ touch authorized_keys
+$ vim authorized_keys
+</code></pre></div>
+</td></tr></table>
+<p>VSCodeのRemote-SSHから接続します。</p>
+<h3 id="sort-json-objects">Sort JSON objects</h3>
+<p>jsonファイルをキーでソートします。</p>
+<ul>
+<li><strong>キーをアルファベット順にソートする</strong></li>
+</ul>
+<p>ソートしたいjsonファイルを開き、コマンドパレットから <code>Sort JSON</code> を実行する。</p>
+<blockquote>
+<p><strong>注意</strong><br />
+間違ったjsonの記法だと正しくソートされません。
+例えば、以下のようにリストの最後にカンマがあるとダメです。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">&quot;vsnotes.templates&quot;</span>: [
+    <span style="background-color: #fff0f0">&quot;tags&quot;</span>,
+],
+</code></pre></div>
+</td></tr></table>
+</blockquote>
+<h3 id="vscode-icons">vscode-icons</h3>
+<p>Visual Studio Codeのファイルアイコンを変える。</p>
+<h3 id="vsnotes">VSNotes</h3>
+<p>Markdown形式のテキストメモの作成やタグ管理できる。</p>
+<ul>
+<li><strong>初期設定</strong></li>
+</ul>
+<p>コマンドパレットから <code>VSNotes: Run setup</code> を実行し、ノートを保存するフォルダを設定します。</p>
+<ul>
+<li><strong>新しいノートを作成する</strong></li>
+</ul>
+<p>コマンドパレットから <code>VSNotes: Create a New Note</code> を実行し、テンプレートを選択します。
+ファイル名を入力すれば新しいノートが作成されます。</p>
+<ul>
+<li><strong>デフォルトのファイル名を変える</strong></li>
+</ul>
+<p>デフォルトのファイル名は <code>日付時刻_タイトル.md</code> であるが、日付時刻の表示が <code>2020-02-16_13-00</code> などのように長い。
+時間まではいらない気がするので、<code>20200216</code> のようにシンプルにする。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">&quot;vsnotes.tokens&quot;</span>: [
+    {
+        <span style="color: #007700">&quot;type&quot;</span>: <span style="background-color: #fff0f0">&quot;datetime&quot;</span>,
+        <span style="color: #007700">&quot;token&quot;</span>: <span style="background-color: #fff0f0">&quot;{dt}&quot;</span>,
+        <span style="color: #007700">&quot;format&quot;</span>: <span style="background-color: #fff0f0">&quot;YYYYMMDD&quot;</span>,
+        <span style="color: #007700">&quot;description&quot;</span>: <span style="background-color: #fff0f0">&quot;Insert formatted datetime.&quot;</span>
+    },
+    {
+        <span style="color: #007700">&quot;type&quot;</span>: <span style="background-color: #fff0f0">&quot;title&quot;</span>,
+        <span style="color: #007700">&quot;token&quot;</span>: <span style="background-color: #fff0f0">&quot;{title}&quot;</span>,
+        <span style="color: #007700">&quot;description&quot;</span>: <span style="background-color: #fff0f0">&quot;Insert note title from input box.&quot;</span>,
+        <span style="color: #007700">&quot;format&quot;</span>: <span style="background-color: #fff0f0">&quot;Untitled&quot;</span>
+    },
+    {
+        <span style="color: #007700">&quot;type&quot;</span>: <span style="background-color: #fff0f0">&quot;extension&quot;</span>,
+        <span style="color: #007700">&quot;token&quot;</span>: <span style="background-color: #fff0f0">&quot;{ext}&quot;</span>,
+        <span style="color: #007700">&quot;description&quot;</span>: <span style="background-color: #fff0f0">&quot;Insert file extension.&quot;</span>,
+        <span style="color: #007700">&quot;format&quot;</span>: <span style="background-color: #fff0f0">&quot;md&quot;</span>
+    }
+],
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>テンプレートを作る</strong></li>
+</ul>
+<p>タグをいちいちつけるのは面倒だし、忘れがちなので、以下のようなテンプレートとして準備をしておく。</p>
+<p>ファイル -&gt; 基本設定 -&gt; ユーザースニペット をクリック。</p>
+<p>検索窓から <code>markdown.json</code> を開き、以下を追記する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">&quot;vsnote_template_tags&quot;</span>: {
+<span style="color: #007700">&quot;prefix&quot;</span>: <span style="background-color: #fff0f0">&quot;vsnote_template_tags&quot;</span>,
+<span style="color: #007700">&quot;body&quot;</span>: [
+    <span style="background-color: #fff0f0">&quot;---&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;tags:&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;1. Notes&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;---&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;\n&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;# Title&quot;</span>,
+    <span style="background-color: #fff0f0">&quot;\n&quot;</span>,
+],
+<span style="color: #007700">&quot;description&quot;</span>: <span style="background-color: #fff0f0">&quot;Template with Tags&quot;</span>,
+}
+</code></pre></div>
+</td></tr></table>
+<p><code>settings.json</code> に以下を追記する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #007700">&quot;vsnotes.templates&quot;</span>: [
+    <span style="background-color: #fff0f0">&quot;tags&quot;</span>,
+],
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<ul>
+<li><code>markdown.json</code> は、Visual Studio Codeのスニペット機能です。使える変数は以下を参照すること。
+  <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables">https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables</a></li>
+<li>同じように <code>markdown.json</code> にスニペットを定義して、<code>settings.json</code> の <code>vsnotes.templates</code> に指定すれば複数のテンプレート登録が可能です。</li>
+</ul>
+</blockquote>
+<h2 id="git">拡張機能：Git</h2>
+<h3 id="gitlens">GitLens</h3>
+<p><code>git blame</code> を便利に使えるようにする。</p>
+<p>GitLens画面を開くと、ブランチ一覧やコミット一覧が見れます。
+コミットを開くと、そのコミットで変更のあったファイルの一覧が表示されます。
+ファイルを選択すると、上の画像のように差分が見えます。</p>
+<p>個人的にはコード内で行をマウスオーバーすると、その行を変更したコミットが出てくるのが一番便利だと思う。</p>
+<h2 id="markdown">拡張機能：Markdown</h2>
+<p>Visual Studio Code を使ってMarkdownのテキスト文書を作成します。</p>
+<h3 id="markdown-all-in-one">Markdown All in One</h3>
+<p>Markdownファイルの編集に便利な機能を提供する。
+「ショートカットキー」「自動でプレビュー表示する」「アウトライン解析」「TableOfContents」などなど。</p>
+<h3 id="markdown-preview-github-styling">Markdown Preview Github Styling</h3>
+<p>プレビュー時のスタイルをGithub風にする。
+Markdown Preview Enhancedではなく通常のプレビューで反映される。</p>
+<p>スタイルシートは <code>~\.vscode\extensions\bierner.markdown-preview-github-styles-0.1.6\github-markdown.css</code> にある。</p>
+<h3 id="markdownlint">markdownlint</h3>
+<p>MarkdownのLinting機能を提供する。</p>
+<h3 id="paste-image">Paste Image</h3>
+<p>Markdown形式のテキストファイルに、クリップボードにある画像を直接貼り付ける。</p>
+<p>画像を貼り付けるには、</p>
+<ul>
+<li>コマンドパレットから <code>Paste Image</code> を実行する。</li>
+<li>ショートカットキー <code>Ctrl+Alt+V</code> で貼り付ける。</li>
+</ul>
+<p>のいずれかを実施すればいいです。</p>
+<ul>
+<li><strong>画像を保存するパスを設定する</strong></li>
+</ul>
+<p><code>path</code> を指定することで設定できます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;pasteImage.path&quot;</span>: <span style="background-color: #fff0f0">&quot;${projectRoot}/assets/images&quot;</span>
+}
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>画像のファイル名の前に文字を付ける</strong></li>
+</ul>
+<p><code>namePrefix</code> を指定することで設定できます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;pasteImage.namePrefix&quot;</span>: <span style="background-color: #fff0f0">&quot;${currentFileNameWithoutExt}-&quot;</span>,
+}
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>ペースト時に画像のファイル名を変更する</strong></li>
+</ul>
+<p><code>showFilePathConfirmInputBox</code> を <code>true</code> にします。</p>
+<p><code>filePathConfirmInputBoxMode</code> で、変更対象をファイル名だけにするかパスまで含めるか選択できます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;pasteImage.filePathConfirmInputBoxMode&quot;</span>: <span style="background-color: #fff0f0">&quot;onlyName&quot;</span>,
+    <span style="color: #007700">&quot;pasteImage.showFilePathConfirmInputBox&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>
+}
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>ペースト時にテキストに挿入するパスを変更する</strong></li>
+</ul>
+<p><code>insertPattern</code> を指定することで設定できます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;pasteImage.insertPattern&quot;</span>: <span style="background-color: #fff0f0">&quot;${imageSyntaxPrefix}/assets/images/${imageFileName}${imageSyntaxSuffix}&quot;</span>,
+}
+</code></pre></div>
+</td></tr></table>
+<h3 id="texttables">TextTables</h3>
+<p>Markdownにおけるテーブル（表）データの編集をサポートする。</p>
+<ol>
+<li>Markdownファイルを開く。</li>
+<li><code>Ctrl+Q</code> を2回押して、“Table Mode”をONにする。</li>
+</ol>
+<h2 id="plantuml">拡張機能：PlantUML</h2>
+<h3 id="plantuml_1">PlantUML</h3>
+<p>plantUMLを使えるようにする。</p>
+<p>PlantUMLを実行するためには、Javaの実行環境が必要となります。
+<a href="https://java.com/ja/">https://java.com/ja/</a> からインストーラをダウンロードして、インストールします。</p>
+<p>PlantUMLでUMLを描画するためには、Graphvizが必要となります。
+<a href="https://www.graphviz.org/">https://www.graphviz.org/</a> からインストーラをダウンロードして、インストールします。</p>
+<p>Graphvizを使用できるようにするために、環境変数 <code>GRAPHVIZ_DOT</code> にdot.exeのパスを指定します。
+もしくは、<code>settings.json</code> に以下のように記述してもいいです。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
+    <span style="color: #007700">&quot;plantuml.commandArgs&quot;</span>: [
+        <span style="background-color: #fff0f0">&quot;-DGRAPHVIZ_DOT=${インストールしたパス}/graphviz-2.38/release/bin/dot.exe&quot;</span>,
+    ],
+}
+</code></pre></div>
+</td></tr></table>
+<h2 id="cc">拡張機能：C/C++</h2>
+<h3 id="cc-for-visual-studio-code">C/C++ for Visual Studio Code</h3>
+<p>C/C++のインテリセンスおよびデバッグの拡張機能を提供する。</p>
+<h3 id="cmake">CMake</h3>
+<p>CMakeの言語サポート。</p>
+<h2 id="python">拡張機能：Python</h2>
+<h3 id="python-extension-for-visual-studio-code">Python extension for Visual Studio Code</h3>
+<p>Pythonの拡張機能を提供する。</p>
+<ul>
+<li><strong>パッケージをインストールする</strong></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ python -m pip install --upgrade pip   <span style="color: #888888"># pipをアップグレード</span>
+$ python -m pip install <span style="color: #333333">{</span>package<span style="color: #333333">}</span>       <span style="color: #888888"># インストール</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="javascript">拡張機能：JavaScript</h2>
+<p>JavaScriptの実行環境である <code>Node.js</code> をインストールします。
+以下のサイトからインストーラをダウンロードしてインストールするだけです。</p>
+<p><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<p>環境変数 <code>PATH</code> を通して、コマンド <code>node</code> と <code>npm</code> を使えるようにしておきます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; node -v
+v14.15.4
+&gt; npm -v
+<span style="color: #6600EE; font-weight: bold">6</span>.14.10
+</code></pre></div>
+</td></tr></table>
+<p>Visual Studio Codeでデバッグ実行します。</p>
+<ul>
+<li><code>F5</code> を押下します。</li>
+<li>「環境の選択」で、<code>Node.js</code> を選択します（初回のみ）。</li>
+<li><code>node.exe {.jsファイル}</code> が実行されます。</li>
+</ul>
+<h2 id="typescript">拡張機能：TypeScript</h2>
+<p>以下のサイトが参考になった。<br />
+<a href="https://maku.blog/p/ak7u3h3">https://maku.blog/p/ak7u3h3</a></p>
+<p>TypeScriptのプロジェクトを作成します。</p>
+<blockquote>
+<p><code>npm install</code> で TypeScript をインストールするときに、<code>-g</code> オプションを付けるとシステムグローバルにインストールすることができますが、開発環境の依存を防ぐために、TypeScript はプロジェクトローカルにインストールしておいた方がよい。</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; npm init -y   <span style="color: #888888"># package.json を作成</span>
+&gt; npm install typescript --save-dev   <span style="color: #888888"># tscコマンドをインストール</span>
+&gt; npm install @types/node --save-dev  <span style="color: #888888"># @types/node パッケージをインストール</span>
+&gt; npx tsc -v
+Version <span style="color: #6600EE; font-weight: bold">4</span>.4.3
+&gt; tsc -v
+Version <span style="color: #6600EE; font-weight: bold">4</span>.4.3
+&gt; ts-node -v
+v10.2.1
+&gt; npx tsc --init <span style="color: #888888"># tsconfig.json を作成</span>
+</code></pre></div>
+</td></tr></table>
+<p>Visual Studio Codeでビルド実行します。
+<code>Ctrl+Shift+B</code> を押下し、<code>tsc: build - tsconfig.json</code> を選択します。</p>
+<h2 id="html">拡張機能：HTML</h2>
+<h3 id="live-server">Live Server</h3>
+<p>簡易ローカルサーバを立てることができる拡張機能。
+ファイルを更新すると自動的にブラウザを更新する。</p>
+<p>VSCodeの右下に表示される <code>Go Live</code> を押下すると、ブラウザで <a href="http://127.0.0.1:5500/">http://127.0.0.1:5500/</a> が実行されます。
+コマンドパレットから「Live Server: Open with Live Server」を選択することで実行することもできます。</p>
+<h2 id="rust">拡張機能：Rust</h2>
+<p>The Rust Programming Language 日本語版 を見れば全てが分かる。<br />
+<a href="https://doc.rust-jp.rs/book-ja/">https://doc.rust-jp.rs/book-ja/</a></p>
+<p>コマンドラインツール <code>rustup</code> をインストールします。<br />
+<a href="https://www.rust-lang.org/ja/tools/install">https://www.rust-lang.org/ja/tools/install</a></p>
+<p><code>rustup</code> を使って、関連ツールをインストールします。</p>
+<blockquote>
+<p><code>rls</code> は、<code>Rust Language Server</code> のことで、自動補完、定義へのジャンプ、インラインのエラー表示などの機能を持ちます。</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; rustup component add rust-analysis
+&gt; rustup component add rust-src
+&gt; rustup component add rls
+&gt; rustup component add rustfmt  <span style="color: #888888"># 自動フォーマッタ</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="rust_1">Rust</h3>
+<h2 id="go">拡張機能：Go</h2>
+<p>Goをインストールします。<br />
+<a href="https://golang.org/dl/">https://golang.org/dl/</a></p>
+<p>コマンド <code>go</code> が使えるか確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&gt; go version
+go version go1.17.2 windows/amd64
+</code></pre></div>
+</td></tr></table>
+<h3 id="go_1">Go</h3>
+<p>コマンドパレットから <code>Go: Install/Update Tools</code> を実行し、以下のパッケージをインストールします。</p>
+<ul>
+<li>gopkgs</li>
+<li>go-outline</li>
+<li>gopls</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -14,7 +14,7 @@
     
     
       
-        <title>ファイアウォールを設定する - My Technical Wiki</title>
+        <title>Apacheをインストールする - My Technical Wiki</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#apache" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ファイアウォールを設定する
+              Apacheをインストールする
             
           </span>
         </div>
@@ -527,14 +527,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -557,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_rock64_install_ubuntu1804/" class="md-nav__link">
+      <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
         Rock64にUbuntu18.04をインストールする
       </a>
     </li>
@@ -571,13 +569,119 @@
   
   
     <li class="md-nav__item">
-      <a href="../20_how_to_use_external_hdd/" class="md-nav__link">
+      <a href="../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
         外付けHDDを使用する
       </a>
     </li>
   
 
             
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -595,12 +699,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ファイアウォールを設定する
+          Apacheをインストールする
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ファイアウォールを設定する
+        Apacheをインストールする
       </a>
       
         
@@ -620,31 +724,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
+  <a href="#ubuntuapache" class="md-nav__link">
+    UbuntuへApacheをインストールする
   </a>
   
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
+    <nav class="md-nav" aria-label="UbuntuへApacheをインストールする">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
+    動作確認
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
+  <a href="#apache_1" class="md-nav__link">
+    Apacheの各種設定を変更する
   </a>
   
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
+    <nav class="md-nav" aria-label="Apacheの各種設定を変更する">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
+  <a href="#rewrite" class="md-nav__link">
+    rewriteを有効にする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ah00558" class="md-nav__link">
+    AH00558のエラーが出るときの対処
   </a>
   
 </li>
@@ -654,37 +772,64 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowsapache" class="md-nav__link">
+    WindowsへApacheをインストールする
   </a>
   
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
+    <nav class="md-nav" aria-label="WindowsへApacheをインストールする">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
+  <a href="#_3" class="md-nav__link">
+    インストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
+  <a href="#_4" class="md-nav__link">
+    設定ファイルを修正
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    動作確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache_2" class="md-nav__link">
+    Apacheの各種設定を変更する
+  </a>
+  
+    <nav class="md-nav" aria-label="Apacheの各種設定を変更する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rewrite_1" class="md-nav__link">
+    rewrite機能を有効にする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    ディレクトリアクセス時の対象ファイルをindex.html以外も対象にする
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
-  </a>
   
 </li>
         
@@ -708,111 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22_ssh_settings/" class="md-nav__link">
-        SSHを設定する
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../23_file_backup_settings/" class="md-nav__link">
-        ファイルのバックアップ設定を行う
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../24-samba_settings/" class="md-nav__link">
-        Sambaで共有フォルダを設定する
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../90_router_settings/" class="md-nav__link">
-        外部からアクセスできるようにする
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          備忘録
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          備忘録
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/apache_install/" class="md-nav__link">
-        Apacheをインストールする
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/doxygen_settings/" class="md-nav__link">
+      <a href="../doxygen_settings/" class="md-nav__link">
         Doxygenの設定ファイルまとめ
       </a>
     </li>
@@ -826,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/github_authentication/" class="md-nav__link">
+      <a href="../github_authentication/" class="md-nav__link">
         GitHubの認証に個人アクセストークンとSSHキーを使用する
       </a>
     </li>
@@ -840,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/githubpages_minimal_mistakes/" class="md-nav__link">
+      <a href="../githubpages_minimal_mistakes/" class="md-nav__link">
         GitHub Pages + Minimal Mistakes を導入する
       </a>
     </li>
@@ -854,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/php_install/" class="md-nav__link">
+      <a href="../php_install/" class="md-nav__link">
         PHPをインストールする
       </a>
     </li>
@@ -868,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/study_about_float/" class="md-nav__link">
+      <a href="../study_about_float/" class="md-nav__link">
         勉強：浮動小数点について
       </a>
     </li>
@@ -882,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/virtualbox_settings/" class="md-nav__link">
+      <a href="../virtualbox_settings/" class="md-nav__link">
         VirtualBoxの設定まとめ
       </a>
     </li>
@@ -922,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_install/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_install/" class="md-nav__link">
         Dokuwikiをインストールする
       </a>
     </li>
@@ -936,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_plugins/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_plugins/" class="md-nav__link">
         Dokuwikiに導入したプラグイン
       </a>
     </li>
@@ -950,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_settings/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_settings/" class="md-nav__link">
         Dokuwikiの各種設定をまとめる
       </a>
     </li>
@@ -997,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_install/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_install/" class="md-nav__link">
         NextCloudをインストールする
       </a>
     </li>
@@ -1011,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
         NextCloudで外部ストレージを利用する
       </a>
     </li>
@@ -1025,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
         NextCloudのDockerイメージでsmbclientを使用する
       </a>
     </li>
@@ -1074,31 +1115,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
+  <a href="#ubuntuapache" class="md-nav__link">
+    UbuntuへApacheをインストールする
   </a>
   
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
+    <nav class="md-nav" aria-label="UbuntuへApacheをインストールする">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
+    動作確認
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
+  <a href="#apache_1" class="md-nav__link">
+    Apacheの各種設定を変更する
   </a>
   
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
+    <nav class="md-nav" aria-label="Apacheの各種設定を変更する">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
+  <a href="#rewrite" class="md-nav__link">
+    rewriteを有効にする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ah00558" class="md-nav__link">
+    AH00558のエラーが出るときの対処
   </a>
   
 </li>
@@ -1108,37 +1163,64 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowsapache" class="md-nav__link">
+    WindowsへApacheをインストールする
   </a>
   
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
+    <nav class="md-nav" aria-label="WindowsへApacheをインストールする">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
+  <a href="#_3" class="md-nav__link">
+    インストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
+  <a href="#_4" class="md-nav__link">
+    設定ファイルを修正
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    動作確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache_2" class="md-nav__link">
+    Apacheの各種設定を変更する
+  </a>
+  
+    <nav class="md-nav" aria-label="Apacheの各種設定を変更する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rewrite_1" class="md-nav__link">
+    rewrite機能を有効にする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    ディレクトリアクセス時の対象ファイルをindex.html以外も対象にする
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
-  </a>
   
 </li>
         
@@ -1159,158 +1241,137 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/21_firewall_settings.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/_memorandum/apache_install.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="_1">ファイアウォールを設定する</h1>
-<h2 id="ufw">簡易ファイアウォール(ufw)</h2>
-<p>パケットフィルタリングできるコマンド <code>iptables</code> を使用すると細かい設定ができるが難しいため、簡易的なファイアウォールを提供する <code>ufw</code> コマンドを使用します。</p>
-<h3 id="_2">ファイアウォールを有効にする</h3>
-<p>ファイアウォールの状態を確認します。
-<code>Status: inactive</code> が無効で、<code>Status: active</code> が有効になります。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw status
+                <h1 id="apache">Apacheをインストールする</h1>
+<p>Apacheをインストールする手順を記載します。</p>
+<h2 id="ubuntuapache">UbuntuへApacheをインストールする</h2>
+<p>ApacheをUbuntuへインストールする手順を記載します。</p>
+<h3 id="_1">インストール</h3>
+<p><code>apt</code> コマンドを使用してインストールします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apt install apache2
 </code></pre></div>
 </td></tr></table>
-<p>ファイアウォールを有効にします。</p>
+<p>バージョンを確認したら、「Apache 2.4.29」でした。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw <span style="color: #007020">enable</span>
-Firewall is active and enabled on system startup
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ apache2 -v
+Server version: Apache/2.4.29 <span style="color: #333333">(</span>Ubuntu<span style="color: #333333">)</span>
+Server built:   <span style="color: #6600EE; font-weight: bold">2019</span>-04-03T13:22:37
 </code></pre></div>
 </td></tr></table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>Command may disrupt existing ssh connections. Proceed with operation (y|n)?</code>
-と聞かれます。SSH接続が出来なくなるけど大丈夫か？という質問なので、<code>y</code> と入力して問題ありません。</p>
-</div>
-<p>ファイアウォールが利用可能なアプリケーションを調べます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw app list
+<h3 id="_2">動作確認</h3>
+<p>以下のコマンドを実行してエラーが出ないことを確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo apache2ctl configtest
+Syntax OK
 </code></pre></div>
 </td></tr></table>
-<p>インストールしているアプリによりますが、例えば以下のような結果になります。</p>
+<p><a href="http://192.168.0.10">http://192.168.0.10</a> にアクセスして、Apacheのデフォルトページが表示されたら成功です。</p>
+<h3 id="apache_1">Apacheの各種設定を変更する</h3>
+<h4 id="rewrite">rewriteを有効にする</h4>
+<p>Apacheのデフォルトでは <code>rewrite</code> は無効になっていますので有効にします。
+DokuWikiなどのサービスを利用する場合には、有効にしておく必要があります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo a2enmod rewrite
+$ sudo service apache2 restart
+</code></pre></div>
+</td></tr></table>
+<h4 id="ah00558">AH00558のエラーが出るときの対処</h4>
+<p><code>apache2ctl configtest</code> などのコマンドで、以下のようなエラーが出る場合があります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globally to suppress this message
+</code></pre></div>
+</td></tr></table>
+<p>このエラーを解消するための手順を記載します。</p>
+<p><code>/etc/apache2/conf-available/fqdn.conf</code> を新規作成し、以下の内容を記載します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>ServerName myserver
+</code></pre></div>
+</td></tr></table>
+<p>以下のコマンドを実行して、設定を有効にします。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo a2enconf fqdn
+$ sudo service apache2 restart
+</code></pre></div>
+</td></tr></table>
+<p>エラーが解消されているはずです。</p>
+<h2 id="windowsapache">WindowsへApacheをインストールする</h2>
+<p>ApacheをWindowsへインストールする手順を記載します。</p>
+<h3 id="_3">インストール</h3>
+<p>以下のURLへアクセスして、Apacheのビルド済パッケージをダウンロードします。</p>
+<ul>
+<li><a href="https://www.apachelounge.com/download/">https://www.apachelounge.com/download/</a><br />
+  httpd-2.4.46-win64-VS16.zip</li>
+</ul>
+<p>Apacheのインストールは、ダウンロードしたZIPファイルを展開し任意の場所に配置するだけです。
+ZIPファイルを展開すると <code>Apache24</code> というフォルダがあるので、その中にあるフォルダ・ファイル群をインストールしたい場所 <code>C:\Apache64</code> に移動させます。</p>
+<p>Apacheのコマンドを使えるようにするために、環境変数PathにApache実行フォルダパス <code>C:\Apache64\bin</code> を追加します。</p>
+<p>バージョン情報を表示させてみます。これで、<code>httpd</code> コマンドが使えるようになっているか確認します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ httpd -v
+Server version: Apache/2.4.41 <span style="color: #333333">(</span>Win64<span style="color: #333333">)</span>
+Apache Lounge VS16 Server built:   Aug  <span style="color: #6600EE; font-weight: bold">9</span> <span style="color: #6600EE; font-weight: bold">2019</span> <span style="color: #6600EE; font-weight: bold">16</span>:46:32
+</code></pre></div>
+</td></tr></table>
+<h3 id="_4">設定ファイルを修正</h3>
+<p>Apacheの設定ファイルは、<code>C:\Apache64\conf\httpd.conf</code> にあります。
+この設定ファイルに、以下の設定を反映させます。</p>
+<ul>
+<li><code>SRVROOT</code>：Apacheを配置したパスに修正します。</li>
+<li><code>ServerName</code>：設定しないと、<code>Could not reliably determine the server’s fully qualified domain name…</code>と表示されて、エラーになってしまう場合があります。</li>
+</ul>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
-  Samba
-</code></pre></div>
-</td></tr></table>
-<h3 id="apache">Apacheのアクセスを許可する</h3>
-<p>Apacheはhttpのみ（ポート80）、Apache Fullはhttpとhttps（ポート443）、Apache Secureはhttpsのみを表しています。
-いずれSSL化したいため、Fullで許可しておきます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow <span style="background-color: #fff0f0">&#39;Apache Full&#39;</span>
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-Apache Full (v6)           ALLOW       Anywhere (v6)
-</code></pre></div>
-</td></tr></table>
-<h4 id="ipv6">IPv6を無効にする</h4>
-<p>Apacheのアクセスを許可すると、IPv4だけでなくIPv6もアクセス許可されます。
-IPv6は無効にしたいため、<code>/etc/default/ufw</code> を以下のように変更します。</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/default/ufw</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code># Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
-# accepted). You will need to &#39;disable&#39; and then &#39;enable&#39; the firewall for
-# the changes to take affect.
-#IPV6=yes
-IPV6=no
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-</code></pre></div>
-</td></tr></table>
-<h3 id="openssh">OpenSSHのアクセスを許可する</h3>
-<p>OpenSSHは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。
-<code>ufw limit OpenSSH</code> でlimitをかける方法もありますが、外部アクセスが必要になったときに考えることにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       192.168.0.0/24
-</code></pre></div>
-</td></tr></table>
-<h4 id="ssh">SSHポート番号を変更する</h4>
-<p>SSHポート番号をデフォルト22から2022へ変更します。</p>
-<p><code>/etc/ssh/sshd_config</code> のバックアップを取り、以下を追記します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>#Port 22
-Port 2022
-</code></pre></div>
-</td></tr></table>
-<p>sshを再起動。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo systemctl restart sshd
-</code></pre></div>
-</td></tr></table>
-<h4 id="2022">ファイアウォールで新ポート2022を公開する</h4>
-<p>まず、プロファイルを作成します。
-<code>/etc/ufw/applications.d/myssh</code> を新規作成して、以下のように記述します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[myssh]
-title=My SSH
-description=This is used by My SSH
-ports=2022/tcp
-</code></pre></div>
-</td></tr></table>
-<p>ファイアウォールで新ポート2022を公開します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app myssh
-</code></pre></div>
-</td></tr></table>
-<p>旧ポート22(OpenSSH)は削除します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw delete allow OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo ufw status
-Status: active
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Define SRVROOT &quot;c:/Apache24&quot;
 
-To                         Action      From
---                         ------      ----
-myssh                      ALLOW       <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24
+#ServerName www.example.com:80
+ServerName localhost:80
 </code></pre></div>
 </td></tr></table>
-<h3 id="samba">Sambaのアクセスを許可する</h3>
-<p>Sambaは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app Samba
+<h3 id="_5">動作確認</h3>
+<p>Apacheをサービスとして起動します。
+コマンドプロンプトから <code>httpd</code> コマンドを使って操作できます。</p>
+<p>※コマンドプロンプトは「管理者として実行」する必要があります。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888888"># ApacheをWindowsサービスに登録する</span>
+$ httpd -k install
+
+<span style="color: #888888"># ApacheをWindowsサービスから削除する</span>
+$ httpd -k uninstall
+
+<span style="color: #888888"># Apacheの起動・停止・再起動</span>
+$ httpd -k start
+$ httpd -k stop
+$ httpd -k restart
 </code></pre></div>
 </td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
+<p>Windowsの管理ツールからも操作可能です。「コントロールパネル」-&gt;「管理ツール」-&gt;「サービス」を表示して、サービス名が「Apache24」となっている行で右クリックすると、起動、停止、再起動などが行えます。</p>
+<p><a href="http://127.0.0.1">http://127.0.0.1</a> にアクセスして、Apacheのデフォルトページが表示されれば成功です。</p>
+<h3 id="apache_2">Apacheの各種設定を変更する</h3>
+<p>Apacheの設定ファイルは <code>httpd.conf</code> です。
+各種設定の変更方法を記載します。</p>
+<h4 id="rewrite_1">rewrite機能を有効にする</h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>LoadModule rewrite_module modules/mod_rewrite.so
+</code></pre></div>
+</td></tr></table>
+<h4 id="indexhtml">ディレクトリアクセス時の対象ファイルをindex.html以外も対象にする</h4>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Samba                      ALLOW       192.168.0.0/24
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&lt;IfModule dir_module&gt;
+    DirectoryIndex index.html index.php
+&lt;/IfModule&gt;
 </code></pre></div>
 </td></tr></table>
                 

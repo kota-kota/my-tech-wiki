@@ -14,7 +14,7 @@
     
     
       
-        <title>ファイアウォールを設定する - My Technical Wiki</title>
+        <title>GitHubの認証に個人アクセストークンとSSHキーを使用する - My Technical Wiki</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#githubssh" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ファイアウォールを設定する
+              GitHubの認証に個人アクセストークンとSSHキーを使用する
             
           </span>
         </div>
@@ -527,14 +527,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -557,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_rock64_install_ubuntu1804/" class="md-nav__link">
+      <a href="../../Server/10_rock64_install_ubuntu1804/" class="md-nav__link">
         Rock64にUbuntu18.04をインストールする
       </a>
     </li>
@@ -571,8 +569,142 @@
   
   
     <li class="md-nav__item">
-      <a href="../20_how_to_use_external_hdd/" class="md-nav__link">
+      <a href="../../Server/20_how_to_use_external_hdd/" class="md-nav__link">
         外付けHDDを使用する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/21_firewall_settings/" class="md-nav__link">
+        ファイアウォールを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/22_ssh_settings/" class="md-nav__link">
+        SSHを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/23_file_backup_settings/" class="md-nav__link">
+        ファイルのバックアップ設定を行う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/24-samba_settings/" class="md-nav__link">
+        Sambaで共有フォルダを設定する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Server/90_router_settings/" class="md-nav__link">
+        外部からアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          備忘録
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          備忘録
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_install/" class="md-nav__link">
+        Apacheをインストールする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doxygen_settings/" class="md-nav__link">
+        Doxygenの設定ファイルまとめ
       </a>
     </li>
   
@@ -595,12 +727,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ファイアウォールを設定する
+          GitHubの認証に個人アクセストークンとSSHキーを使用する
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ファイアウォールを設定する
+        GitHubの認証に個人アクセストークンとSSHキーを使用する
       </a>
       
         
@@ -620,31 +752,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
+  <a href="#_1" class="md-nav__link">
+    個人アクセストークン
   </a>
   
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
+    <nav class="md-nav" aria-label="個人アクセストークン">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
+    個人アクセストークンを取得する
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
+  <a href="#_3" class="md-nav__link">
+    個人アクセストークンを使用する
   </a>
   
 </li>
@@ -653,37 +777,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
+    SSHキー
+  </a>
+  
+    <nav class="md-nav" aria-label="SSHキー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    SSHキーを取得する
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
+  <a href="#sshgithub" class="md-nav__link">
+    SSHキーをGitHubアカウントへ追加する
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
+  <a href="#ssh_2" class="md-nav__link">
+    SSHキーを使用する
   </a>
   
 </li>
@@ -708,139 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22_ssh_settings/" class="md-nav__link">
-        SSHを設定する
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../23_file_backup_settings/" class="md-nav__link">
-        ファイルのバックアップ設定を行う
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../24-samba_settings/" class="md-nav__link">
-        Sambaで共有フォルダを設定する
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../90_router_settings/" class="md-nav__link">
-        外部からアクセスできるようにする
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          備忘録
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="備忘録" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          備忘録
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/apache_install/" class="md-nav__link">
-        Apacheをインストールする
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/doxygen_settings/" class="md-nav__link">
-        Doxygenの設定ファイルまとめ
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/github_authentication/" class="md-nav__link">
-        GitHubの認証に個人アクセストークンとSSHキーを使用する
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../_memorandum/githubpages_minimal_mistakes/" class="md-nav__link">
+      <a href="../githubpages_minimal_mistakes/" class="md-nav__link">
         GitHub Pages + Minimal Mistakes を導入する
       </a>
     </li>
@@ -854,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/php_install/" class="md-nav__link">
+      <a href="../php_install/" class="md-nav__link">
         PHPをインストールする
       </a>
     </li>
@@ -868,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/study_about_float/" class="md-nav__link">
+      <a href="../study_about_float/" class="md-nav__link">
         勉強：浮動小数点について
       </a>
     </li>
@@ -882,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/virtualbox_settings/" class="md-nav__link">
+      <a href="../virtualbox_settings/" class="md-nav__link">
         VirtualBoxの設定まとめ
       </a>
     </li>
@@ -922,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_install/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_install/" class="md-nav__link">
         Dokuwikiをインストールする
       </a>
     </li>
@@ -936,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_plugins/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_plugins/" class="md-nav__link">
         Dokuwikiに導入したプラグイン
       </a>
     </li>
@@ -950,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/dokuwiki/dokuwiki_settings/" class="md-nav__link">
+      <a href="../dokuwiki/dokuwiki_settings/" class="md-nav__link">
         Dokuwikiの各種設定をまとめる
       </a>
     </li>
@@ -997,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_install/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_install/" class="md-nav__link">
         NextCloudをインストールする
       </a>
     </li>
@@ -1011,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_use_external_storage/" class="md-nav__link">
         NextCloudで外部ストレージを利用する
       </a>
     </li>
@@ -1025,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_memorandum/nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
+      <a href="../nextcloud/nextcloud_use_smbclient/" class="md-nav__link">
         NextCloudのDockerイメージでsmbclientを使用する
       </a>
     </li>
@@ -1074,31 +1061,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ufw" class="md-nav__link">
-    簡易ファイアウォール(ufw)
+  <a href="#_1" class="md-nav__link">
+    個人アクセストークン
   </a>
   
-    <nav class="md-nav" aria-label="簡易ファイアウォール(ufw)">
+    <nav class="md-nav" aria-label="個人アクセストークン">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ファイアウォールを有効にする
+    個人アクセストークンを取得する
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apache" class="md-nav__link">
-    Apacheのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="Apacheのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ipv6" class="md-nav__link">
-    IPv6を無効にする
+  <a href="#_3" class="md-nav__link">
+    個人アクセストークンを使用する
   </a>
   
 </li>
@@ -1107,37 +1086,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#openssh" class="md-nav__link">
-    OpenSSHのアクセスを許可する
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenSSHのアクセスを許可する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
-    SSHポート番号を変更する
+    SSHキー
+  </a>
+  
+    <nav class="md-nav" aria-label="SSHキー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    SSHキーを取得する
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    ファイアウォールで新ポート2022を公開する
+  <a href="#sshgithub" class="md-nav__link">
+    SSHキーをGitHubアカウントへ追加する
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#samba" class="md-nav__link">
-    Sambaのアクセスを許可する
+  <a href="#ssh_2" class="md-nav__link">
+    SSHキーを使用する
   </a>
   
 </li>
@@ -1159,160 +1133,108 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/Server/21_firewall_settings.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/kota-kota/my-tech-wiki/edit/master/docs/_memorandum/github_authentication.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="_1">ファイアウォールを設定する</h1>
-<h2 id="ufw">簡易ファイアウォール(ufw)</h2>
-<p>パケットフィルタリングできるコマンド <code>iptables</code> を使用すると細かい設定ができるが難しいため、簡易的なファイアウォールを提供する <code>ufw</code> コマンドを使用します。</p>
-<h3 id="_2">ファイアウォールを有効にする</h3>
-<p>ファイアウォールの状態を確認します。
-<code>Status: inactive</code> が無効で、<code>Status: active</code> が有効になります。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw status
-</code></pre></div>
-</td></tr></table>
-<p>ファイアウォールを有効にします。</p>
+                <h1 id="githubssh">GitHubの認証に個人アクセストークンとSSHキーを使用する</h1>
+<p>今までGitHubへのアクセスにはパスワード認証を使ってきましたが、GitHubがパスワード認証を廃止するというお知らせがメールで届きました。
+2021年8月13日にパスワード認証が廃止されるようです。<br />
+<a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/</a></p>
+<p>そのため、パスワード認証の変わりに個人アクセストークンとSSHキーを使用するようにします。</p>
+<h2 id="_1">個人アクセストークン</h2>
+<p>以下のドキュメントを参考にします。<br />
+<a href="https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token</a></p>
+<h3 id="_2">個人アクセストークンを取得する</h3>
+<ul>
+<li>GitHubにログインします。</li>
+<li>右上のプロフィール画像をクリックして、<code>Settings</code> をクリックします。</li>
+<li><code>Developer settings</code> をクリックします。</li>
+<li><code>Personal access tokens</code> をクリックします。</li>
+<li><code>Generate new token</code> をクリックします。</li>
+<li>Noteにトークンのわかりやすい名前を記入します。
+  リポジトリアクセス用なので、「Access to my repo」としました。</li>
+<li>権限を設定します。
+  トークンを使用してコマンドラインからリポジトリにアクセスするため、<code>repo</code> 関連を選択します。</li>
+<li>repo</li>
+<li>admin:repo_hook</li>
+<li>delete_repo</li>
+<li><code>Generate token</code> をクリックします。</li>
+<li>トークンをクリップボードにコピーします。
+  ページを離れると参照できなくなるため、パスワードのように管理が必要です。</li>
+</ul>
+<h3 id="_3">個人アクセストークンを使用する</h3>
+<p>HTTPS経由でGitの操作をする際に、パスワードの代わりにそのトークンを入力できます。</p>
+<p>例えば、コマンドラインでは以下のように入力できます。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw <span style="color: #007020">enable</span>
-Firewall is active and enabled on system startup
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ git clone https://github.com/username/repo.git
+Username: my_username
+Password: my_token
 </code></pre></div>
 </td></tr></table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>Command may disrupt existing ssh connections. Proceed with operation (y|n)?</code>
-と聞かれます。SSH接続が出来なくなるけど大丈夫か？という質問なので、<code>y</code> と入力して問題ありません。</p>
-</div>
-<p>ファイアウォールが利用可能なアプリケーションを調べます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw app list
-</code></pre></div>
-</td></tr></table>
-<p>インストールしているアプリによりますが、例えば以下のような結果になります。</p>
+<h2 id="ssh">SSHキー</h2>
+<p>以下のドキュメントを参考にします。<br />
+<a href="https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh">https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh</a></p>
+<h3 id="ssh_1">SSHキーを取得する</h3>
+<p>SSHキーを生成します。
+Windowsの場合は、GitBashで生成できます。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
-  Samba
-</code></pre></div>
-</td></tr></table>
-<h3 id="apache">Apacheのアクセスを許可する</h3>
-<p>Apacheはhttpのみ（ポート80）、Apache Fullはhttpとhttps（ポート443）、Apache Secureはhttpsのみを表しています。
-いずれSSL化したいため、Fullで許可しておきます。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow <span style="background-color: #fff0f0">&#39;Apache Full&#39;</span>
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-Apache Full (v6)           ALLOW       Anywhere (v6)
-</code></pre></div>
-</td></tr></table>
-<h4 id="ipv6">IPv6を無効にする</h4>
-<p>Apacheのアクセスを許可すると、IPv4だけでなくIPv6もアクセス許可されます。
-IPv6は無効にしたいため、<code>/etc/default/ufw</code> を以下のように変更します。</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/default/ufw</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code># Set to yes to apply rules to support IPv6 (no means only IPv6 on loopback
-# accepted). You will need to &#39;disable&#39; and then &#39;enable&#39; the firewall for
-# the changes to take affect.
-#IPV6=yes
-IPV6=no
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Apache Full                ALLOW       Anywhere
-</code></pre></div>
-</td></tr></table>
-<h3 id="openssh">OpenSSHのアクセスを許可する</h3>
-<p>OpenSSHは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。
-<code>ufw limit OpenSSH</code> でlimitをかける方法もありますが、外部アクセスが必要になったときに考えることにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       192.168.0.0/24
-</code></pre></div>
-</td></tr></table>
-<h4 id="ssh">SSHポート番号を変更する</h4>
-<p>SSHポート番号をデフォルト22から2022へ変更します。</p>
-<p><code>/etc/ssh/sshd_config</code> のバックアップを取り、以下を追記します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>#Port 22
-Port 2022
-</code></pre></div>
-</td></tr></table>
-<p>sshを再起動。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo systemctl restart sshd
-</code></pre></div>
-</td></tr></table>
-<h4 id="2022">ファイアウォールで新ポート2022を公開する</h4>
-<p>まず、プロファイルを作成します。
-<code>/etc/ufw/applications.d/myssh</code> を新規作成して、以下のように記述します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>[myssh]
-title=My SSH
-description=This is used by My SSH
-ports=2022/tcp
-</code></pre></div>
-</td></tr></table>
-<p>ファイアウォールで新ポート2022を公開します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app myssh
-</code></pre></div>
-</td></tr></table>
-<p>旧ポート22(OpenSSH)は削除します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw delete allow OpenSSH
-</code></pre></div>
-</td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ sudo ufw status
-Status: active
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ ssh-keygen -t rsa -b <span style="color: #6600EE; font-weight: bold">4096</span>   <span style="color: #888888"># 全てデフォルトでエンター連打</span>
+Generating public/private rsa key pair.
+Enter file <span style="color: #008800; font-weight: bold">in</span> which to save the key <span style="color: #333333">(</span>/c/Users/Kyohei/.ssh/id_rsa<span style="color: #333333">)</span>:
+Enter passphrase <span style="color: #333333">(</span>empty <span style="color: #008800; font-weight: bold">for</span> no passphrase<span style="color: #333333">)</span>:
+Enter same passphrase again:
 
-To                         Action      From
---                         ------      ----
-myssh                      ALLOW       <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24
+$ ls
+id_rsa  id_rsa.pub
 </code></pre></div>
 </td></tr></table>
-<h3 id="samba">Sambaのアクセスを許可する</h3>
-<p>Sambaは、LAN内からのアクセスのみを許可し、それ以外は許可しないようにします。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo ufw allow from <span style="color: #6600EE; font-weight: bold">192</span>.168.0.0/24 to any app Samba
+<h3 id="sshgithub">SSHキーをGitHubアカウントへ追加する</h3>
+<ul>
+<li>GitHubにログインします。</li>
+<li>右上のプロフィール画像をクリックして、<code>Settings</code> をクリックします。</li>
+<li><code>SSH and GPG keys</code> をクリックします。</li>
+<li><code>New SSH key</code> をクリックします。</li>
+<li>Keyに <code>id_rsa.pub</code> の内容を記入します。</li>
+<li><code>Add SSH Key</code> をクリックします。</li>
+</ul>
+<h3 id="ssh_2">SSHキーを使用する</h3>
+<p>コマンドラインからクローンする例です。
+SSHキー認証されるため、パスワード要求はされません。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$ git clone git@github.com:kota-kota/kota-kota.github.io.git
+Cloning into <span style="background-color: #fff0f0">&#39;kota-kota.github.io&#39;</span>...
+The authenticity of host <span style="background-color: #fff0f0">&#39;github.com (52.69.186.44)&#39;</span> can<span style="background-color: #fff0f0">&#39;t be established.</span>
+<span style="background-color: #fff0f0">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span>
+<span style="background-color: #fff0f0">Are you sure you want to continue connecting (yes/no)? yes</span>
+<span style="background-color: #fff0f0">Warning: Permanently added &#39;</span>github.com,52.69.186.44<span style="color: #FF0000; background-color: #FFAAAA">&#39;</span> <span style="color: #333333">(</span>RSA<span style="color: #333333">)</span> to the list of known hosts.
+remote: Enumerating objects: <span style="color: #6600EE; font-weight: bold">413</span>, <span style="color: #008800; font-weight: bold">done</span>.
+remote: Counting objects: <span style="color: #6600EE; font-weight: bold">100</span>% <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">413</span>/413<span style="color: #333333">)</span>, <span style="color: #008800; font-weight: bold">done</span>.
+remote: Compressing objects: <span style="color: #6600EE; font-weight: bold">100</span>% <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">336</span>/336<span style="color: #333333">)</span>, <span style="color: #008800; font-weight: bold">done</span>.
+remote: Total <span style="color: #6600EE; font-weight: bold">413</span> <span style="color: #333333">(</span>delta <span style="color: #6600EE; font-weight: bold">108</span><span style="color: #333333">)</span>, reused <span style="color: #6600EE; font-weight: bold">363</span> <span style="color: #333333">(</span>delta <span style="color: #6600EE; font-weight: bold">61</span><span style="color: #333333">)</span>, pack-reused <span style="color: #6600EE; font-weight: bold">0</span>
+Receiving objects: <span style="color: #6600EE; font-weight: bold">100</span>% <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">413</span>/413<span style="color: #333333">)</span>, <span style="color: #6600EE; font-weight: bold">437</span>.53 KiB | <span style="color: #6600EE; font-weight: bold">718</span>.00 KiB/s, <span style="color: #008800; font-weight: bold">done</span>.
+Resolving deltas: <span style="color: #6600EE; font-weight: bold">100</span>% <span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">108</span>/108<span style="color: #333333">)</span>, <span style="color: #008800; font-weight: bold">done</span>.
 </code></pre></div>
 </td></tr></table>
-<p><code>sudo ufw status</code> で状態を確認します。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>To                         Action      From
---                         ------      ----
-Samba                      ALLOW       192.168.0.0/24
-</code></pre></div>
-</td></tr></table>
+<p>SSHキー生成の時にpassphraseを設定することでパスワードを要求させることもできます。</p>
                 
               
               
