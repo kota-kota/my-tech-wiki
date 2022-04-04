@@ -384,6 +384,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    ユーザをdockerグループに参加させる
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1200,6 +1207,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    ユーザをdockerグループに参加させる
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1348,6 +1362,15 @@ enabled=False
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo docker run hello-world
 </code></pre></div>
 </td></tr></table>
+<h3 id="docker_1">ユーザをdockerグループに参加させる</h3>
+<p>Dockerのプロセスは、dockerグループまたはroot権限を持ったユーザのみ制御することができます。
+しかし、Dockerを制御するたびにsudoコマンドを打つのは面倒です。
+また、root権限で作業しているとdockerグループ権限を間違って行使してしまう可能性があります。</p>
+<p>そのため、ubuntuユーザーでもdocker操作できるようにしておきます。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo gpasswd -a <span style="color: #333333">{</span>ユーザ<span style="color: #333333">}</span> docker
+</code></pre></div>
+</td></tr></table>
+<p>この後、再起動が必要です。</p>
                 
               
               
