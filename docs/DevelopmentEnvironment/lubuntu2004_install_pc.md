@@ -107,6 +107,8 @@ sudo apt-get install openssh-server
 network:
   version: 2
   renderer: networkd
+  dhcp4: false
+  dchp6: false
   ethernets:
     enp3s0:
       addresses: [192.168.0.20/24]
