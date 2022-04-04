@@ -391,6 +391,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vscoderemote-ssh" class="md-nav__link">
+    VSCodeのRemote-SSHを設定する
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1214,6 +1221,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vscoderemote-ssh" class="md-nav__link">
+    VSCodeのRemote-SSHを設定する
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1371,6 +1385,25 @@ enabled=False
 </code></pre></div>
 </td></tr></table>
 <p>この後、再起動が必要です。</p>
+<h3 id="vscoderemote-ssh">VSCodeのRemote-SSHを設定する</h3>
+<p>クライアント側でOpenSSHで鍵を生成する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>ssh-keygen
+</code></pre></div>
+</td></tr></table>
+<p>サーバへ公開鍵 <code>id_rsa.pub</code> を転送する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>scp %USERPROFILE%<span style="color: #666666; font-weight: bold; background-color: #fff0f0">\i</span>d_rsa.pub <span style="color: #333333">[</span>ユーザ名<span style="color: #333333">]</span>@<span style="color: #333333">[</span>SSHサーバのIPアドレス<span style="color: #333333">]</span>:~/.ssh/authorized_keys
+</code></pre></div>
+</td></tr></table>
+<p>configファイルに秘密鍵のパスを記載する。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Host [任意の名前]
+  HostName [接続先SSHサーバのIPアドレス]
+  User [SSHサーバにログインするためのユーザ]
+  IdentityFile %USERPROFILE%\id_rsa   #秘密鍵のパス
+</code></pre></div>
+</td></tr></table>
                 
               
               
