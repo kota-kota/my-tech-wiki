@@ -177,3 +177,26 @@ sudo gpasswd -a {ユーザ} docker
 ```
 
 この後、再起動が必要です。
+
+### VSCodeのRemote-SSHを設定する
+
+クライアント側でOpenSSHで鍵を生成する。
+
+```bash
+ssh-keygen
+```
+
+サーバへ公開鍵 `id_rsa.pub` を転送する。
+
+```bash
+scp %USERPROFILE%\id_rsa.pub [ユーザ名]@[SSHサーバのIPアドレス]:~/.ssh/authorized_keys
+```
+
+configファイルに秘密鍵のパスを記載する。
+
+```text
+Host [任意の名前]
+  HostName [接続先SSHサーバのIPアドレス]
+  User [SSHサーバにログインするためのユーザ]
+  IdentityFile %USERPROFILE%\id_rsa   #秘密鍵のパス
+```
