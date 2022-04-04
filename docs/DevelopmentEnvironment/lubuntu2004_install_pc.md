@@ -163,3 +163,17 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```bash
 sudo docker run hello-world
 ```
+
+### ユーザをdockerグループに参加させる
+
+Dockerのプロセスは、dockerグループまたはroot権限を持ったユーザのみ制御することができます。
+しかし、Dockerを制御するたびにsudoコマンドを打つのは面倒です。
+また、root権限で作業しているとdockerグループ権限を間違って行使してしまう可能性があります。
+
+そのため、ubuntuユーザーでもdocker操作できるようにしておきます。
+
+```bash
+sudo gpasswd -a {ユーザ} docker
+```
+
+この後、再起動が必要です。
